@@ -1,0 +1,476 @@
+import {
+  collection,
+  doc,
+  getDocs,
+  setDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  limit,
+  writeBatch
+} from 'firebase/firestore';
+import { db } from './firebase';
+import { Resident, Transaction, AuditLog, MonthKey, MonthPaymentStatus, MonthlyLedgerItem } from '../types/index';
+import { buildResidentsFromRoster, IPL_TARIFF, MONTH_KEYS, MONTH_LABELS } from '../data/saungKebunRosterData';
+
+export enum OperationType {
+  CREATE = 'create',
+  UPDATE = 'update',
+  DELETE = 'delete',
+  LIST = 'list',
+  GET = 'get',
+  WRITE = 'write',
+}
+
+export interface FirestoreErrorInfo {
+  error: string;
+  operationType: OperationType;
+  path: string | null;
+  authInfo: {
+    userId?: string | null;
+    email?: string | null;
+    emailVerified?: boolean | null;
+    isAnonymous?: boolean | null;
+    tenantId?: string | null;
+    providerInfo?: {
+      providerId?: string | null;
+      email?: string | null;
+    }[];
+  };
+}
+
+export function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null): never {
+  const errInfo: FirestoreErrorInfo = {
+    error: error instanceof Error ? error.message : String(error),
+    authInfo: {
+      userId: null,
+      email: null,
+      emailVerified: null,
+      isAnonymous: null,
+      tenantId: null,
+      providerInfo: []
+    },
+    operationType,
+    path
+  };
+  console.error('Firestore Error: ', JSON.stringify(errInfo));
+  throw new Error(JSON.stringify(errInfo));
+}
+
+// Helper to sort residents logically by block then unit number
+export function sortResidentsByUnit(list: Resident[]): Resident[] {
+  const blockOrder: Record<string, number> = {
+    'B3': 1,
+    'B5': 2,
+    'B6': 3,
+    'B7': 4,
+    'B8': 5,
+    'B8-Ext': 6
+  };
+
+  return [...list].sort((a, b) => {
+    const orderA = blockOrder[a.blokGroup] || 99;
+    const orderB = blockOrder[b.blokGroup] || 99;
+    if (orderA !== orderB) return orderA - orderB;
+    return parseInt(a.nomorRumah, 10) - parseInt(b.nomorRumah, 10);
+  });
+}
+
+// Initial seeder if Firestore database is empty
+export async function seedFirestoreIfEmpty(): Promise<boolean> {
+  const path = 'residents';
+  try {
+    const sampleSnap = await getDocs(query(collection(db, path), limit(1)));
+    if (!sampleSnap.empty) {
+      return false; // already populated
+    }
+
+    console.log('Seeding initial 115 Saung Kebun residents to Cloud Firestore...');
+    const initialResidents = buildResidentsFromRoster();
+
+    // Firestore batch limit is 500 operations, 115 fits in a single batch
+    const batch = writeBatch(db);
+    initialResidents.forEach((res) => {
+      const ref = doc(db, 'residents', res.id);
+      batch.set(ref, res);
+    });
+
+    // Seed initial settings
+    const settingsRef = doc(db, 'settings', 'general');
+    batch.set(settingsRef, {
+      estateName: 'Perumahan Saung Kebun',
+      associationName: 'Paguyuban Warga Saung Kebun',
+      standardTariff: IPL_TARIFF,
+      currentMonth: 'September 2026',
+      totalLots: 115,
+      updatedAt: new Date().toISOString()
+    });
+
+    // Seed initial audit log
+    const logRef = doc(db, 'auditLogs', 'log-init-001');
+    batch.set(logRef, {
+      id: 'log-init-001',
+      timestamp: new Date().toISOString(),
+      actor: 'Sistem Cloud Firestore',
+      role: 'BENDAHARA',
+      action: 'DATABASE_INITIALIZATION',
+      detail: 'Inisialisasi 115 data warga Saung Kebun ke database real-time.'
+    });
+
+    // Seed initial cash balance
+    const initTrxRef = doc(db, 'transactions', 'trx-init-001');
+    batch.set(initTrxRef, {
+      id: 'trx-init-001',
+      nomorTransaksi: 'TRX-SK-202610-001',
+      tanggal: '2026-10-01T07:00:00.000Z',
+      tipe: 'PEMASUKAN',
+      kategori: 'Saldo Awal Kas Paguyuban',
+      nominal: 18500000,
+      keterangan: 'Sisa saldo kas umum perumahan Saung Kebun periode September 2026',
+      penanggungJawab: 'Bendahara (Bp. Andriansyah)',
+      status: 'BERHASIL'
+    });
+
+    await batch.commit();
+    console.log('Cloud Firestore successfully seeded with 115 residents!');
+    return true;
+  } catch (err) {
+    handleFirestoreError(err, OperationType.WRITE, path);
+  }
+}
+
+// Real-time listener for residents
+export function subscribeToFirestoreResidents(
+  onUpdate: (residents: Resident[]) => void,
+  onError?: (err: any) => void
+): () => void {
+  const path = 'residents';
+  return onSnapshot(
+    collection(db, path),
+    (snapshot) => {
+      if (snapshot.empty) {
+        // Trigger background seed if empty
+        seedFirestoreIfEmpty().catch(console.error);
+        return;
+      }
+      const list: Resident[] = [];
+      snapshot.forEach((d) => {
+        list.push({ ...d.data(), id: d.id } as Resident);
+      });
+      onUpdate(sortResidentsByUnit(list));
+    },
+    (error) => {
+      if (onError) onError(error);
+      handleFirestoreError(error, OperationType.LIST, path);
+    }
+  );
+}
+
+// Real-time listener for transactions
+export function subscribeToFirestoreTransactions(
+  onUpdate: (transactions: Transaction[]) => void,
+  onError?: (err: any) => void
+): () => void {
+  const path = 'transactions';
+  return onSnapshot(
+    collection(db, path),
+    (snapshot) => {
+      const list: Transaction[] = [];
+      snapshot.forEach((d) => {
+        list.push({ ...d.data(), id: d.id } as Transaction);
+      });
+      // Sort newest first
+      list.sort((a, b) => new Date(b.tanggal).getTime() - new Date(a.tanggal).getTime());
+      onUpdate(list);
+    },
+    (error) => {
+      if (onError) onError(error);
+      handleFirestoreError(error, OperationType.LIST, path);
+    }
+  );
+}
+
+// Real-time listener for audit logs
+export function subscribeToFirestoreAuditLogs(
+  onUpdate: (logs: AuditLog[]) => void,
+  onError?: (err: any) => void
+): () => void {
+  const path = 'auditLogs';
+  return onSnapshot(
+    collection(db, path),
+    (snapshot) => {
+      const list: AuditLog[] = [];
+      snapshot.forEach((d) => {
+        list.push({ ...d.data(), id: d.id } as AuditLog);
+      });
+      list.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+      onUpdate(list);
+    },
+    (error) => {
+      if (onError) onError(error);
+      handleFirestoreError(error, OperationType.LIST, path);
+    }
+  );
+}
+
+// Add new resident to Firestore
+export async function addResidentToFirestore(resident: Resident): Promise<void> {
+  const path = `residents/${resident.id}`;
+  try {
+    const ref = doc(db, 'residents', resident.id);
+    await setDoc(ref, resident);
+
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: 'Bendahara / Pengurus',
+      role: 'BENDAHARA',
+      action: 'TAMBAH_WARGA',
+      detail: `Menambahkan warga baru unit ${resident.blok} (${resident.nama}) ke database.`
+    });
+  } catch (err) {
+    handleFirestoreError(err, OperationType.CREATE, path);
+  }
+}
+
+// Delete resident from Firestore
+export async function deleteResidentFromFirestore(residentId: string, residentName?: string, unitCode?: string): Promise<void> {
+  const path = `residents/${residentId}`;
+  try {
+    const ref = doc(db, 'residents', residentId);
+    await deleteDoc(ref);
+
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: 'Bendahara / Pengurus',
+      role: 'BENDAHARA',
+      action: 'HAPUS_WARGA',
+      detail: `Menghapus data warga ${residentName || residentId} di unit ${unitCode || ''} dari database.`
+    });
+  } catch (err) {
+    handleFirestoreError(err, OperationType.DELETE, path);
+  }
+}
+
+// Update resident data in Firestore
+export async function updateResidentInFirestore(residentId: string, updates: Partial<Resident>): Promise<void> {
+  const path = `residents/${residentId}`;
+  try {
+    const ref = doc(db, 'residents', residentId);
+    await setDoc(ref, updates, { merge: true });
+
+    // Also record audit log
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: 'Bendahara / Pengurus',
+      role: 'BENDAHARA',
+      action: 'UPDATE_WARGA',
+      detail: `Memperbarui profil data warga ${updates.nama || residentId} di unit ${updates.blok || ''}`
+    });
+  } catch (err) {
+    handleFirestoreError(err, OperationType.UPDATE, path);
+  }
+}
+
+// Update a specific month payment status for a resident
+export async function updateResidentMonthStatusInFirestore(
+  resident: Resident,
+  month: MonthKey,
+  status: MonthPaymentStatus,
+  amount: number = 100000
+): Promise<void> {
+  const path = `residents/${resident.id}`;
+  try {
+    const updatedLedger: Record<MonthKey, MonthlyLedgerItem> = {
+      ...(resident.monthlyLedger || ({} as Record<MonthKey, MonthlyLedgerItem>)),
+      [month]: {
+        status,
+        amount: (status === 'LUNAS' || status === 'MENUNGGAK') ? amount : 0,
+        paidDate: status === 'LUNAS' ? new Date().toISOString().split('T')[0] : undefined,
+        note: month === 'Jan' ? 'Mulai setor Februari' : undefined
+      }
+    };
+
+    // Recalculate totals
+    let totalSetoran = 0;
+    const bulanMenunggakList: string[] = [];
+
+    MONTH_KEYS.forEach((mKey) => {
+      const item = updatedLedger[mKey];
+      if (item?.status === 'LUNAS') {
+        totalSetoran += item.amount || IPL_TARIFF;
+      } else if (item?.status === 'MENUNGGAK') {
+        bulanMenunggakList.push(MONTH_LABELS[mKey]);
+      }
+    });
+
+    const totalTunggakan = bulanMenunggakList.length * IPL_TARIFF;
+
+    let statusBulanIni: 'Lunas' | 'Belum Bayar' | 'Menunggak' = 'Belum Bayar';
+    if (updatedLedger.Sep?.status === 'LUNAS') {
+      statusBulanIni = 'Lunas';
+    } else if (updatedLedger.Sep?.status === 'MENUNGGAK' || totalTunggakan > 0) {
+      statusBulanIni = 'Menunggak';
+    } else if (resident.nama && !resident.nama.includes('(Belum Tercatat')) {
+      statusBulanIni = 'Belum Bayar';
+    }
+
+    const ref = doc(db, 'residents', resident.id);
+    await updateDoc(ref, {
+      monthlyLedger: updatedLedger,
+      totalSetoran,
+      totalTunggakan,
+      bulanMenunggak: bulanMenunggakList,
+      statusBulanIni,
+      lastPaymentDate: status === 'LUNAS' ? new Date().toISOString().split('T')[0] : resident.lastPaymentDate
+    });
+
+    // Record audit log
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: 'Bendahara Paguyuban',
+      role: 'BENDAHARA',
+      action: 'UPDATE_STATUS_IURAN',
+      detail: `Ubah status iuran bulan ${month} unit ${resident.blok} (${resident.nama}) menjadi ${status}`
+    });
+  } catch (err) {
+    handleFirestoreError(err, OperationType.UPDATE, path);
+  }
+}
+
+// Record digital payment (QRIS, VA, Transfer)
+export async function recordPaymentInFirestore(payload: {
+  resident: Resident;
+  months: string[];
+  amount: number;
+  method: string;
+  actorName: string;
+}): Promise<Transaction> {
+  const txPath = 'transactions';
+  try {
+    const txId = `trx-${Date.now()}`;
+    const receiptNum = `KW/SK/${new Date().getFullYear()}${(new Date().getMonth() + 1).toString().padStart(2, '0')}/${Math.floor(1000 + Math.random() * 9000)}`;
+
+    const newTx: Transaction = {
+      id: txId,
+      nomorTransaksi: `TRX-SK-${Date.now().toString().slice(-6)}`,
+      tanggal: new Date().toISOString(),
+      tipe: 'PEMASUKAN',
+      kategori: 'Iuran IPL Warga',
+      nominal: payload.amount,
+      keterangan: `Pembayaran Iuran IPL (${payload.months.join(', ')}) oleh ${payload.resident.nama} (${payload.resident.blok})`,
+      wargaId: payload.resident.id,
+      namaWarga: payload.resident.nama,
+      blokWarga: payload.resident.blok,
+      bulanDibayar: payload.months.join(', '),
+      metodePembayaran: payload.method as any,
+      penanggungJawab: payload.actorName || 'Sistem Pembayaran Digital',
+      status: 'BERHASIL',
+      noKwitansi: receiptNum
+    };
+
+    // 1. Save Transaction Doc
+    await setDoc(doc(db, 'transactions', txId), newTx);
+
+    // 2. Update Resident Monthly Ledger
+    const updatedLedger: Record<MonthKey, MonthlyLedgerItem> = {
+      ...(payload.resident.monthlyLedger || ({} as Record<MonthKey, MonthlyLedgerItem>))
+    };
+
+    const monthAbbrMap: Record<string, MonthKey> = {
+      'Januari': 'Jan', 'Februari': 'Feb', 'Maret': 'Mar', 'April': 'Apr',
+      'Mei': 'Mei', 'Juni': 'Jun', 'Juli': 'Jul', 'Agustus': 'Agt',
+      'September': 'Sep', 'Oktober': 'Okt', 'November': 'Nov', 'Desember': 'Des'
+    };
+
+    payload.months.forEach((mStr) => {
+      const monthPrefix = mStr.split(' ')[0];
+      const mKey = monthAbbrMap[monthPrefix] || (mStr as MonthKey);
+      if (mKey && updatedLedger[mKey]) {
+        updatedLedger[mKey] = {
+          status: 'LUNAS',
+          amount: IPL_TARIFF,
+          paidDate: new Date().toISOString().split('T')[0]
+        };
+      }
+    });
+
+    let totalSetoran = (payload.resident.totalSetoran || 0) + payload.amount;
+    const bulanMenunggakList = (payload.resident.bulanMenunggak || []).filter(
+      (m) => !payload.months.some((pm) => m.toLowerCase().includes(pm.toLowerCase()))
+    );
+    const totalTunggakan = bulanMenunggakList.length * IPL_TARIFF;
+
+    await updateDoc(doc(db, 'residents', payload.resident.id), {
+      monthlyLedger: updatedLedger,
+      totalSetoran,
+      totalTunggakan,
+      bulanMenunggak: bulanMenunggakList,
+      statusBulanIni: 'Lunas',
+      lastPaymentDate: new Date().toISOString().split('T')[0]
+    });
+
+    // 3. Save Audit Log
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: payload.actorName || payload.resident.nama,
+      role: 'WARGA',
+      action: 'PEMBAYARAN_IPL_ONLINE',
+      detail: `Pembayaran ${payload.method} sebesar Rp ${payload.amount.toLocaleString('id-ID')} untuk unit ${payload.resident.blok} berhasil diproses.`
+    });
+
+    return newTx;
+  } catch (err) {
+    handleFirestoreError(err, OperationType.WRITE, txPath);
+  }
+}
+
+// Record neighborhood expense
+export async function recordExpenseInFirestore(payload: {
+  kategori: string;
+  nominal: number;
+  keterangan: string;
+  penanggungJawab: string;
+}): Promise<Transaction> {
+  const txPath = 'transactions';
+  try {
+    const txId = `trx-exp-${Date.now()}`;
+    const newTx: Transaction = {
+      id: txId,
+      nomorTransaksi: `EXP-SK-${Date.now().toString().slice(-6)}`,
+      tanggal: new Date().toISOString(),
+      tipe: 'PENGELUARAN',
+      kategori: payload.kategori,
+      nominal: payload.nominal,
+      keterangan: payload.keterangan,
+      penanggungJawab: payload.penanggungJawab,
+      status: 'BERHASIL'
+    };
+
+    await setDoc(doc(db, 'transactions', txId), newTx);
+
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: payload.penanggungJawab,
+      role: 'BENDAHARA',
+      action: 'PENCATATAN_PENGELUARAN',
+      detail: `Pengeluaran ${payload.kategori} sebesar Rp ${payload.nominal.toLocaleString('id-ID')}: ${payload.keterangan}`
+    });
+
+    return newTx;
+  } catch (err) {
+    handleFirestoreError(err, OperationType.WRITE, txPath);
+  }
+}

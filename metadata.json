@@ -1,0 +1,6 @@
+{
+  "name": "IPL Saung Kebun - Sistem Laporan & Iuran Warga",
+  "description": "Sistem pencatatan laporan IPL Perumahan Saung Kebun dengan multi-role (Ketua, Bendahara, 100+ Akun Warga), pembayaran digital QRIS/VA real-time, transparansi keuangan, dan notifikasi otomatis WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

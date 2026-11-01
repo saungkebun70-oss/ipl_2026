@@ -1,0 +1,123 @@
+{
+  "entities": {
+    "Resident": {
+      "title": "Resident",
+      "description": "Perumahan Saung Kebun resident directory and lot records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique unit identifier like res-b3-01" },
+        "blok": { "type": "string", "description": "Full display unit code (e.g. B03/01)" },
+        "blokGroup": { "type": "string", "description": "Block group (B3, B5, B6, B7, B8, B8-Ext)" },
+        "nomorRumah": { "type": "string", "description": "Unit number in block" },
+        "nama": { "type": "string", "description": "Name of head of household" },
+        "noWhatsapp": { "type": "string", "description": "WhatsApp contact number" },
+        "statusHunian": { "type": "string", "description": "Occupancy status" },
+        "tipeRumah": { "type": "string", "description": "House type (Standar, Hook)" },
+        "tagihanBulanan": { "type": "number", "description": "Standard monthly fee (100000)" },
+        "statusBulanIni": { "type": "string", "description": "Status for current active month" },
+        "bulanMenunggak": { "type": "array", "description": "List of arrears months" },
+        "totalTunggakan": { "type": "number", "description": "Total amount in arrears" },
+        "pin": { "type": "string", "description": "PIN code" }
+      },
+      "required": ["id", "blok", "blokGroup", "nomorRumah", "nama", "tagihanBulanan"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Income, dues payments and neighborhood operational expenditures",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Transaction identifier" },
+        "nomorTransaksi": { "type": "string", "description": "Invoice reference code" },
+        "tanggal": { "type": "string", "description": "ISO timestamp" },
+        "tipe": { "type": "string", "enum": ["PEMASUKAN", "PENGELUARAN"] },
+        "kategori": { "type": "string", "description": "Category name" },
+        "nominal": { "type": "number", "description": "Amount in IDR" },
+        "keterangan": { "type": "string", "description": "Transaction description" },
+        "penanggungJawab": { "type": "string", "description": "Officer or system actor" },
+        "status": { "type": "string", "description": "Transaction status" }
+      },
+      "required": ["id", "nomorTransaksi", "tanggal", "tipe", "nominal", "status"]
+    },
+    "PaymentRecord": {
+      "title": "PaymentRecord",
+      "description": "Monthly IPL dues payment status and transaction record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Invoice ID or month record key" },
+        "residentId": { "type": "string", "description": "Associated resident unit ID" },
+        "year": { "type": "number", "description": "Calendar year" },
+        "month": { "type": "string", "description": "Month abbreviation (Jan..Des)" },
+        "amount": { "type": "number", "description": "Fee amount" },
+        "status": { "type": "string", "enum": ["LUNAS", "MENUNGGAK", "BELUM_BAYAR", "KOSONG", "NONE"] },
+        "paymentMethod": { "type": "string", "description": "Payment method (QRIS, VA, KAS)" },
+        "paidAt": { "type": "string", "description": "Timestamp ISO string of payment" }
+      },
+      "required": ["id", "residentId", "year", "month", "status"]
+    },
+    "Expense": {
+      "title": "Expense",
+      "description": "Neighborhood operational expense record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Expense ID" },
+        "date": { "type": "string", "description": "Expense date" },
+        "title": { "type": "string", "description": "Expense title / purpose" },
+        "category": { "type": "string", "description": "Category (Keamanan, Kebersihan, etc.)" },
+        "amount": { "type": "number", "description": "Expense amount in IDR" },
+        "status": { "type": "string", "enum": ["APPROVED", "PENDING_VERIFICATION", "REJECTED"] }
+      },
+      "required": ["id", "date", "title", "category", "amount", "status"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "System activity audit trail",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Audit log identifier" },
+        "timestamp": { "type": "string", "description": "ISO timestamp" },
+        "actor": { "type": "string", "description": "User or system" },
+        "role": { "type": "string", "description": "User role" },
+        "action": { "type": "string", "description": "Action name" },
+        "detail": { "type": "string", "description": "Action details" }
+      },
+      "required": ["id", "timestamp", "actor", "action"]
+    },
+    "Setting": {
+      "title": "Setting",
+      "description": "Paguyuban organizational and estate configurations",
+      "type": "object",
+      "properties": {
+        "estateName": { "type": "string" },
+        "standardTariff": { "type": "number" },
+        "currentMonth": { "type": "string" }
+      },
+      "required": ["estateName", "standardTariff"]
+    }
+  },
+  "firestore": {
+    "/residents/{residentId}": {
+      "schema": "Resident",
+      "description": "Master resident database for Perumahan Saung Kebun"
+    },
+    "/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Cash ledger transactions, payments, and operational expenses"
+    },
+    "/payments/{paymentId}": {
+      "schema": "PaymentRecord",
+      "description": "Monthly dues records and audit status"
+    },
+    "/expenses/{expenseId}": {
+      "schema": "Expense",
+      "description": "Financial expenditures and verification state"
+    },
+    "/auditLogs/{logId}": {
+      "schema": "AuditLog",
+      "description": "Audit trails for dual-verification and administrative actions"
+    },
+    "/settings/{settingId}": {
+      "schema": "Setting",
+      "description": "Estate metadata and configuration parameters"
+    }
+  }
+}
