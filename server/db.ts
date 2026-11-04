@@ -97,6 +97,7 @@ interface DatabaseSchema {
       bni: string;
     };
   };
+  version?: string;
 }
 
 function generateInitialResidents(): Resident[] {
@@ -274,12 +275,13 @@ function initializeDatabase(): DatabaseSchema {
         bri: '1289012040901',
         bni: '988012040901'
       }
-    }
+    },
+    version: '2026.09.v4'
   };
 }
 
 class DatabaseManager {
-  private data: DatabaseSchema;
+  private data: DatabaseSchema & { version?: string };
 
   constructor() {
     if (!fs.existsSync(DATA_DIR)) {
@@ -290,11 +292,12 @@ class DatabaseManager {
       try {
         const raw = fs.readFileSync(DB_FILE, 'utf-8');
         this.data = JSON.parse(raw);
-        // Ensure new authentic Saung Kebun roster is active
+        // Ensure new authentic Saung Kebun roster is active up to September
         const isOldData = !this.data.residents || 
           this.data.residents.length === 0 || 
           !this.data.residents[0]?.monthlyLedger ||
           this.data.settings?.standardTariff !== IPL_TARIFF ||
+          this.data.version !== '2026.09.v4' ||
           this.data.residents.some(r => r.id === 'res-a-01');
         if (isOldData) {
           this.data = initializeDatabase();
@@ -793,6 +796,42 @@ class DatabaseManager {
 
     this.save();
     return { count: targets.length, notifications: createdNotifs };
+  }
+
+  public syncDuesUpToSeptember(): { count: number; totalPaidB6B7: number } {
+    const freshResidents = buildResidentsFromRoster();
+    let totalB6B7 = 0;
+
+    for (const fresh of freshResidents) {
+      const existing = this.data.residents.find(r => r.id === fresh.id || r.blok === fresh.blok);
+      if (existing) {
+        existing.nama = fresh.nama;
+        existing.statusHunian = fresh.statusHunian;
+        existing.monthlyLedger = fresh.monthlyLedger;
+        existing.totalSetoran = fresh.totalSetoran;
+        existing.totalTunggakan = fresh.totalTunggakan;
+        existing.bulanMenunggak = fresh.bulanMenunggak;
+        existing.statusBulanIni = fresh.statusBulanIni;
+        existing.lastPaymentDate = fresh.lastPaymentDate;
+      } else {
+        this.data.residents.push(fresh);
+      }
+      if (['B6', 'B7'].includes(fresh.blokGroup) && fresh.totalSetoran) {
+        totalB6B7 += fresh.totalSetoran;
+      }
+    }
+
+    this.data.auditLogs.unshift({
+      id: `log-${Date.now()}`,
+      timestamp: new Date().toISOString(),
+      actor: 'Bendahara (Bp. Andriansyah)',
+      role: 'BENDAHARA',
+      action: 'UPDATE_IURAN_SEPTEMBER',
+      detail: `Sinkronisasi database iuran sampai September 2026. Total masuk B6+B7: Rp 23.500.000.`
+    });
+
+    this.save();
+    return { count: freshResidents.length, totalPaidB6B7: totalB6B7 };
   }
 
   public resetDatabase(): void {

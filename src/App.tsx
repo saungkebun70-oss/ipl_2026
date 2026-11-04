@@ -20,7 +20,7 @@ import { WhatsAppLogModal } from './components/WhatsAppLogModal';
 import { AuditTrailModal } from './components/AuditTrailModal';
 import { ArchitectureModal } from './components/ArchitectureModal';
 import { Resident, Transaction, AuditLog, WhatsAppNotification, FinancialSummary, Role, OrganizationOfficer } from './types';
-import { getSummary, getResidents, getTransactions, getAuditLogs, getNotifications } from './lib/api';
+import { getSummary, getResidents, getTransactions, getAuditLogs, getNotifications, syncDatabaseDuesUpToSeptember } from './lib/api';
 import { testFirestoreConnection } from './lib/firebase';
 import {
   subscribeToFirestoreResidents,
@@ -128,6 +128,15 @@ export default function App() {
         console.log('115 Data Warga Saung Kebun berhasil diinisialisasi ke Cloud Firestore');
       }
     }).catch(console.error);
+
+    // Auto-sync dues up to September once to ensure persistent Firestore has latest ledger
+    const hasSyncedSept = localStorage.getItem('saung_kebun_dues_synced_sept_2026_v2');
+    if (!hasSyncedSept) {
+      syncDatabaseDuesUpToSeptember().then(() => {
+        localStorage.setItem('saung_kebun_dues_synced_sept_2026_v2', 'true');
+        console.log('Database iuran sampai September berhasil disinkronkan otomatis.');
+      }).catch(console.error);
+    }
 
     // 3. Real-time Firestore snapshot listeners
     const unsubResidents = subscribeToFirestoreResidents(

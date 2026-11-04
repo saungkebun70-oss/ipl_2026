@@ -118,6 +118,20 @@ export function createExpressApp() {
     }
   });
 
+  // Sync / update all dues up to September 2026
+  app.post('/api/sync-dues-september', (req: Request, res: Response) => {
+    try {
+      const result = db.syncDuesUpToSeptember();
+      res.json({
+        success: true,
+        message: `Database iuran berhasil disinkronkan sampai September 2026 (${result.count} unit, Total B6+B7: Rp ${result.totalPaidB6B7.toLocaleString('id-ID')})`,
+        ...result
+      });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
   // 4. Resident / Admin Login
   app.post('/api/auth/login', (req: Request, res: Response) => {
     try {

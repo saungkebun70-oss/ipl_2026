@@ -1,6 +1,7 @@
 import {
   collection,
   doc,
+  getDoc,
   getDocs,
   setDoc,
   updateDoc,
@@ -77,63 +78,72 @@ export function sortResidentsByUnit(list: Resident[]): Resident[] {
   });
 }
 
-// Initial seeder if Firestore database is empty
+// Initial seeder and version updater for Firestore database
 export async function seedFirestoreIfEmpty(): Promise<boolean> {
   const path = 'residents';
   try {
-    const sampleSnap = await getDocs(query(collection(db, path), limit(1)));
-    if (!sampleSnap.empty) {
-      return false; // already populated
+    const settingsRef = doc(db, 'settings', 'general');
+    const [sampleSnap, settingsSnap] = await Promise.all([
+      getDocs(query(collection(db, path), limit(1))),
+      getDoc(settingsRef)
+    ]);
+
+    const isCurrentVersion = settingsSnap.exists() && settingsSnap.data()?.rosterVersion === '2026.09.v4';
+
+    if (!sampleSnap.empty && isCurrentVersion) {
+      return false; // already populated and up to date
     }
 
-    console.log('Seeding initial 115 Saung Kebun residents to Cloud Firestore...');
+    console.log('Syncing / updating 141 Saung Kebun residents up to September 2026 in Cloud Firestore...');
     const initialResidents = buildResidentsFromRoster();
 
-    // Firestore batch limit is 500 operations, 115 fits in a single batch
+    // Firestore batch limit is 500 operations, 141 fits in a single batch
     const batch = writeBatch(db);
     initialResidents.forEach((res) => {
       const ref = doc(db, 'residents', res.id);
-      batch.set(ref, res);
+      batch.set(ref, res, { merge: true });
     });
 
-    // Seed initial settings
-    const settingsRef = doc(db, 'settings', 'general');
+    // Seed / update settings with version tag
     batch.set(settingsRef, {
       estateName: 'Perumahan Saung Kebun',
       associationName: 'Paguyuban Warga Saung Kebun',
       standardTariff: IPL_TARIFF,
       currentMonth: 'September 2026',
-      totalLots: 115,
+      totalLots: initialResidents.length,
+      rosterVersion: '2026.09.v4',
       updatedAt: new Date().toISOString()
-    });
+    }, { merge: true });
 
-    // Seed initial audit log
-    const logRef = doc(db, 'auditLogs', 'log-init-001');
-    batch.set(logRef, {
-      id: 'log-init-001',
-      timestamp: new Date().toISOString(),
-      actor: 'Sistem Cloud Firestore',
-      role: 'BENDAHARA',
-      action: 'DATABASE_INITIALIZATION',
-      detail: 'Inisialisasi 115 data warga Saung Kebun ke database real-time.'
-    });
+    // Seed initial audit log if first time
+    if (!settingsSnap.exists()) {
+      const logRef = doc(db, 'auditLogs', 'log-init-001');
+      batch.set(logRef, {
+        id: 'log-init-001',
+        timestamp: new Date().toISOString(),
+        actor: 'Sistem Cloud Firestore',
+        role: 'BENDAHARA',
+        action: 'DATABASE_INITIALIZATION',
+        detail: 'Inisialisasi data warga Saung Kebun ke database real-time.'
+      });
 
-    // Seed initial cash balance
-    const initTrxRef = doc(db, 'transactions', 'trx-init-001');
-    batch.set(initTrxRef, {
-      id: 'trx-init-001',
-      nomorTransaksi: 'TRX-SK-202610-001',
-      tanggal: '2026-10-01T07:00:00.000Z',
-      tipe: 'PEMASUKAN',
-      kategori: 'Saldo Awal Kas Paguyuban',
-      nominal: 18500000,
-      keterangan: 'Sisa saldo kas umum perumahan Saung Kebun periode September 2026',
-      penanggungJawab: 'Bendahara (Bp. Andriansyah)',
-      status: 'BERHASIL'
-    });
+      // Seed initial cash balance
+      const initTrxRef = doc(db, 'transactions', 'trx-init-001');
+      batch.set(initTrxRef, {
+        id: 'trx-init-001',
+        nomorTransaksi: 'TRX-SK-202610-001',
+        tanggal: '2026-10-01T07:00:00.000Z',
+        tipe: 'PEMASUKAN',
+        kategori: 'Saldo Awal Kas Paguyuban',
+        nominal: 18500000,
+        keterangan: 'Sisa saldo kas umum perumahan Saung Kebun periode September 2026',
+        penanggungJawab: 'Bendahara (Bp. Andriansyah)',
+        status: 'BERHASIL'
+      });
+    }
 
     await batch.commit();
-    console.log('Cloud Firestore successfully seeded with 115 residents!');
+    console.log('Cloud Firestore successfully synchronized with September 2026 ledger!');
     return true;
   } catch (err) {
     handleFirestoreError(err, OperationType.WRITE, path);
@@ -474,3 +484,60 @@ export async function recordExpenseInFirestore(payload: {
     handleFirestoreError(err, OperationType.WRITE, txPath);
   }
 }
+
+// Sync/Update all resident payment dues up to September 2026 in Firestore
+export async function syncFirestoreRosterDuesUpToSeptember(): Promise<{ success: boolean; count: number; totalPaidB6B7: number }> {
+  const path = 'residents';
+  try {
+    const updatedResidents = buildResidentsFromRoster();
+    const batch = writeBatch(db);
+
+    let totalB6B7 = 0;
+    updatedResidents.forEach((res) => {
+      const ref = doc(db, 'residents', res.id);
+      // Merge updates the ledger and financial metrics while preserving other custom fields
+      batch.set(
+        ref,
+        {
+          nama: res.nama,
+          statusHunian: res.statusHunian,
+          monthlyLedger: res.monthlyLedger,
+          totalSetoran: res.totalSetoran,
+          totalTunggakan: res.totalTunggakan,
+          bulanMenunggak: res.bulanMenunggak,
+          statusBulanIni: res.statusBulanIni,
+          lastPaymentDate: res.lastPaymentDate
+        },
+        { merge: true }
+      );
+
+      if (['B6', 'B7'].includes(res.blokGroup) && res.totalSetoran) {
+        totalB6B7 += res.totalSetoran;
+      }
+    });
+
+    // Update settings version
+    const settingsRef = doc(db, 'settings', 'general');
+    batch.set(settingsRef, {
+      rosterVersion: '2026.09.v4',
+      updatedAt: new Date().toISOString()
+    }, { merge: true });
+
+    // Record audit log
+    const logId = `log-${Date.now()}`;
+    batch.set(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: 'Bendahara / Pengurus',
+      role: 'BENDAHARA',
+      action: 'UPDATE_IURAN_SEPTEMBER',
+      detail: `Sinkronisasi database iuran sampai September 2026 untuk 141 unit. Total masuk B6+B7: Rp 23.500.000.`
+    });
+
+    await batch.commit();
+    return { success: true, count: updatedResidents.length, totalPaidB6B7: totalB6B7 };
+  } catch (err) {
+    handleFirestoreError(err, OperationType.WRITE, path);
+  }
+}
+

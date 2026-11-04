@@ -66,7 +66,7 @@ export const RAW_ROSTER_DATA: RawResidentRow[] = [
   { blok: 'B3', no: 9, nama: '' }, // Merah KOSONG
   {
     blok: 'B3', no: 10, nama: 'DEVA CAHYONO',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS' }
+    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS' }
   },
   { blok: 'B3', no: 11, nama: '' }, // Merah KOSONG
   {
@@ -180,7 +180,7 @@ export const RAW_ROSTER_DATA: RawResidentRow[] = [
   },
   {
     blok: 'B6', no: 10, nama: 'AJE',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'MENUNGGAK', Agt: 'MENUNGGAK', Sep: 'MENUNGGAK' }
+    months: { Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'MENUNGGAK' }
   },
   {
     blok: 'B6', no: 11, nama: 'JODI KURNIAWAN',
@@ -217,14 +217,14 @@ export const RAW_ROSTER_DATA: RawResidentRow[] = [
   { blok: 'B6', no: 22, nama: '' },
   {
     blok: 'B6', no: 23, nama: 'MULYONO',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
+    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS' }
   },
 
   // ==========================================
   // 4. BLOK B7 (1 s/d 23)
   // ==========================================
   { blok: 'B7', no: 1, nama: '' },
-  { blok: 'B7', no: 2, nama: 'NOVAL' },
+  { blok: 'B7', no: 2, nama: '' },
   {
     blok: 'B7', no: 3, nama: 'DEDE NURHIDAYAT',
     months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
@@ -244,7 +244,7 @@ export const RAW_ROSTER_DATA: RawResidentRow[] = [
   },
   {
     blok: 'B7', no: 8, nama: 'CECEP',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
+    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Sep: 'LUNAS' }
   },
   { blok: 'B7', no: 9, nama: '' },
   {
@@ -257,7 +257,7 @@ export const RAW_ROSTER_DATA: RawResidentRow[] = [
   },
   {
     blok: 'B7', no: 12, nama: 'ARGA',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
+    months: { Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
   },
   { blok: 'B7', no: 13, nama: '' },
   {
@@ -271,15 +271,15 @@ export const RAW_ROSTER_DATA: RawResidentRow[] = [
   },
   {
     blok: 'B7', no: 17, nama: 'MUTIARA',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
+    months: { Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
   },
   {
     blok: 'B7', no: 18, nama: 'MUHAMMAD DAUD SYAH',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'MENUNGGAK', Jul: 'MENUNGGAK', Agt: 'MENUNGGAK', Sep: 'MENUNGGAK' }
+    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'MENUNGGAK', Agt: 'MENUNGGAK', Sep: 'MENUNGGAK' }
   },
   {
     blok: 'B7', no: 19, nama: 'SAMSURI',
-    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'LUNAS' }
+    months: { Feb: 'LUNAS', Mar: 'LUNAS', Apr: 'LUNAS', Mei: 'LUNAS', Jun: 'LUNAS', Jul: 'LUNAS', Agt: 'LUNAS', Sep: 'MENUNGGAK' }
   },
   {
     blok: 'B7', no: 20, nama: 'RISKY ALVIN NOVIANTO',

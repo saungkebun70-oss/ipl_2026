@@ -2,11 +2,11 @@
   "residents": [
     {
       "id": "res-b3-01",
-      "blok": "B03/01",
+      "blok": "B3/01",
       "blokGroup": "B3",
       "nomorRumah": "01",
       "nama": "ASEP SUKARMA",
-      "noWhatsapp": "0812-8800-1000",
+      "noWhatsapp": "081210006004",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -18,42 +18,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -77,11 +78,11 @@
     },
     {
       "id": "res-b3-02",
-      "blok": "B03/02",
+      "blok": "B3/02",
       "blokGroup": "B3",
       "nomorRumah": "02",
       "nama": "SUBHAN HUMAMI",
-      "noWhatsapp": "0812-8800-1073",
+      "noWhatsapp": "081210006041",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -93,42 +94,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -152,11 +154,11 @@
     },
     {
       "id": "res-b3-03",
-      "blok": "B03/03",
+      "blok": "B3/03",
       "blokGroup": "B3",
       "nomorRumah": "03",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006078",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -218,11 +220,11 @@
     },
     {
       "id": "res-b3-04",
-      "blok": "B03/04",
+      "blok": "B3/04",
       "blokGroup": "B3",
       "nomorRumah": "04",
       "nama": "ADITYA PRAYOGA",
-      "noWhatsapp": "0812-8800-1219",
+      "noWhatsapp": "081210006115",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -234,42 +236,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -293,11 +296,11 @@
     },
     {
       "id": "res-b3-05",
-      "blok": "B03/05",
+      "blok": "B3/05",
       "blokGroup": "B3",
       "nomorRumah": "05",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006152",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -359,11 +362,11 @@
     },
     {
       "id": "res-b3-06",
-      "blok": "B03/06",
+      "blok": "B3/06",
       "blokGroup": "B3",
       "nomorRumah": "06",
       "nama": "AFAN",
-      "noWhatsapp": "0812-8800-1365",
+      "noWhatsapp": "081210006189",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -375,42 +378,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -434,7 +438,7 @@
     },
     {
       "id": "res-b3-07",
-      "blok": "B03/07",
+      "blok": "B3/07",
       "blokGroup": "B3",
       "nomorRumah": "07",
       "nama": "DION YULIANA (BP ERLANGGA - KETUA)",
@@ -450,42 +454,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -509,11 +514,11 @@
     },
     {
       "id": "res-b3-08",
-      "blok": "B03/08",
+      "blok": "B3/08",
       "blokGroup": "B3",
       "nomorRumah": "08",
       "nama": "RAKA",
-      "noWhatsapp": "0812-8800-1511",
+      "noWhatsapp": "081210006263",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -525,42 +530,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -584,11 +590,11 @@
     },
     {
       "id": "res-b3-09",
-      "blok": "B03/09",
+      "blok": "B3/09",
       "blokGroup": "B3",
       "nomorRumah": "09",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006300",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -650,11 +656,11 @@
     },
     {
       "id": "res-b3-10",
-      "blok": "B03/10",
+      "blok": "B3/10",
       "blokGroup": "B3",
       "nomorRumah": "10",
       "nama": "DEVA CAHYONO",
-      "noWhatsapp": "0812-8800-1657",
+      "noWhatsapp": "081210006337",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -666,42 +672,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "KOSONG",
@@ -724,11 +731,11 @@
     },
     {
       "id": "res-b3-11",
-      "blok": "B03/11",
+      "blok": "B3/11",
       "blokGroup": "B3",
       "nomorRumah": "11",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006374",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -790,11 +797,11 @@
     },
     {
       "id": "res-b3-12",
-      "blok": "B03/12",
+      "blok": "B3/12",
       "blokGroup": "B3",
       "nomorRumah": "12",
       "nama": "PUGUH DWI",
-      "noWhatsapp": "0812-8800-1803",
+      "noWhatsapp": "081210006411",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -806,42 +813,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -865,11 +873,11 @@
     },
     {
       "id": "res-b3-13",
-      "blok": "B03/13",
+      "blok": "B3/13",
       "blokGroup": "B3",
       "nomorRumah": "13",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006448",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -931,11 +939,11 @@
     },
     {
       "id": "res-b3-14",
-      "blok": "B03/14",
+      "blok": "B3/14",
       "blokGroup": "B3",
       "nomorRumah": "14",
       "nama": "ARDI MAULANA",
-      "noWhatsapp": "0812-8800-1949",
+      "noWhatsapp": "081210006485",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -947,42 +955,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -1006,11 +1015,11 @@
     },
     {
       "id": "res-b3-15",
-      "blok": "B03/15",
+      "blok": "B3/15",
       "blokGroup": "B3",
       "nomorRumah": "15",
       "nama": "WENDY ROCHIMAT S",
-      "noWhatsapp": "0812-8800-2022",
+      "noWhatsapp": "081210006522",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1027,47 +1036,44 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Jul": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Agt": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -1086,11 +1092,11 @@
     },
     {
       "id": "res-b3-16",
-      "blok": "B03/16",
+      "blok": "B3/16",
       "blokGroup": "B3",
       "nomorRumah": "16",
       "nama": "TRI SEPTIONO",
-      "noWhatsapp": "0812-8800-2095",
+      "noWhatsapp": "081210006559",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1105,47 +1111,46 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -1164,11 +1169,11 @@
     },
     {
       "id": "res-b3-17",
-      "blok": "B03/17",
+      "blok": "B3/17",
       "blokGroup": "B3",
       "nomorRumah": "17",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006596",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1230,11 +1235,11 @@
     },
     {
       "id": "res-b3-18",
-      "blok": "B03/18",
+      "blok": "B3/18",
       "blokGroup": "B3",
       "nomorRumah": "18",
       "nama": "CASMAT",
-      "noWhatsapp": "0812-8800-2241",
+      "noWhatsapp": "081210006633",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1246,42 +1251,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -1305,11 +1311,11 @@
     },
     {
       "id": "res-b3-19",
-      "blok": "B03/19",
+      "blok": "B3/19",
       "blokGroup": "B3",
       "nomorRumah": "19",
       "nama": "SARMA",
-      "noWhatsapp": "0812-8800-2314",
+      "noWhatsapp": "081210006670",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1321,42 +1327,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -1380,11 +1387,11 @@
     },
     {
       "id": "res-b3-20",
-      "blok": "B03/20",
+      "blok": "B3/20",
       "blokGroup": "B3",
       "nomorRumah": "20",
       "nama": "ARDIANSYAH ZEIN",
-      "noWhatsapp": "0812-8800-2387",
+      "noWhatsapp": "081210006707",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1396,42 +1403,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -1455,11 +1463,11 @@
     },
     {
       "id": "res-b3-21",
-      "blok": "B03/21",
+      "blok": "B3/21",
       "blokGroup": "B3",
       "nomorRumah": "21",
       "nama": "CECEP SUGIANTO",
-      "noWhatsapp": "0812-8800-2460",
+      "noWhatsapp": "081210006744",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1473,47 +1481,47 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -1532,11 +1540,11 @@
     },
     {
       "id": "res-b3-22",
-      "blok": "B03/22",
+      "blok": "B3/22",
       "blokGroup": "B3",
       "nomorRumah": "22",
       "nama": "DICKY YANDA ALVIANA",
-      "noWhatsapp": "0812-8800-2533",
+      "noWhatsapp": "081210006781",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1548,42 +1556,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -1607,11 +1616,11 @@
     },
     {
       "id": "res-b3-23",
-      "blok": "B03/23",
+      "blok": "B3/23",
       "blokGroup": "B3",
       "nomorRumah": "23",
       "nama": "FAISAL",
-      "noWhatsapp": "0812-8800-2606",
+      "noWhatsapp": "081210006818",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -1623,42 +1632,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -1682,11 +1692,11 @@
     },
     {
       "id": "res-b5-01",
-      "blok": "B05/01",
+      "blok": "B5/01",
       "blokGroup": "B5",
       "nomorRumah": "01",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006238",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -1748,11 +1758,11 @@
     },
     {
       "id": "res-b5-02",
-      "blok": "B05/02",
+      "blok": "B5/02",
       "blokGroup": "B5",
       "nomorRumah": "02",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006275",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1814,11 +1824,11 @@
     },
     {
       "id": "res-b5-03",
-      "blok": "B05/03",
+      "blok": "B5/03",
       "blokGroup": "B5",
       "nomorRumah": "03",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006312",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1880,11 +1890,11 @@
     },
     {
       "id": "res-b5-04",
-      "blok": "B05/04",
+      "blok": "B5/04",
       "blokGroup": "B5",
       "nomorRumah": "04",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006349",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -1946,11 +1956,11 @@
     },
     {
       "id": "res-b5-05",
-      "blok": "B05/05",
+      "blok": "B5/05",
       "blokGroup": "B5",
       "nomorRumah": "05",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006386",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2012,11 +2022,11 @@
     },
     {
       "id": "res-b5-06",
-      "blok": "B05/06",
+      "blok": "B5/06",
       "blokGroup": "B5",
       "nomorRumah": "06",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006423",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2078,11 +2088,11 @@
     },
     {
       "id": "res-b5-07",
-      "blok": "B05/07",
+      "blok": "B5/07",
       "blokGroup": "B5",
       "nomorRumah": "07",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006460",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2144,11 +2154,11 @@
     },
     {
       "id": "res-b5-08",
-      "blok": "B05/08",
+      "blok": "B5/08",
       "blokGroup": "B5",
       "nomorRumah": "08",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006497",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2210,11 +2220,11 @@
     },
     {
       "id": "res-b5-09",
-      "blok": "B05/09",
+      "blok": "B5/09",
       "blokGroup": "B5",
       "nomorRumah": "09",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006534",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2276,11 +2286,11 @@
     },
     {
       "id": "res-b5-10",
-      "blok": "B05/10",
+      "blok": "B5/10",
       "blokGroup": "B5",
       "nomorRumah": "10",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006571",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2342,11 +2352,11 @@
     },
     {
       "id": "res-b5-11",
-      "blok": "B05/11",
+      "blok": "B5/11",
       "blokGroup": "B5",
       "nomorRumah": "11",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006608",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2408,11 +2418,11 @@
     },
     {
       "id": "res-b5-12",
-      "blok": "B05/12",
+      "blok": "B5/12",
       "blokGroup": "B5",
       "nomorRumah": "12",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006645",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2474,11 +2484,11 @@
     },
     {
       "id": "res-b5-13",
-      "blok": "B05/13",
+      "blok": "B5/13",
       "blokGroup": "B5",
       "nomorRumah": "13",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006682",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2540,11 +2550,11 @@
     },
     {
       "id": "res-b5-14",
-      "blok": "B05/14",
+      "blok": "B5/14",
       "blokGroup": "B5",
       "nomorRumah": "14",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006719",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2606,11 +2616,11 @@
     },
     {
       "id": "res-b5-15",
-      "blok": "B05/15",
+      "blok": "B5/15",
       "blokGroup": "B5",
       "nomorRumah": "15",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006756",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2672,11 +2682,11 @@
     },
     {
       "id": "res-b5-16",
-      "blok": "B05/16",
+      "blok": "B5/16",
       "blokGroup": "B5",
       "nomorRumah": "16",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006793",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2738,11 +2748,11 @@
     },
     {
       "id": "res-b5-17",
-      "blok": "B05/17",
+      "blok": "B5/17",
       "blokGroup": "B5",
       "nomorRumah": "17",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006830",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2804,11 +2814,11 @@
     },
     {
       "id": "res-b5-18",
-      "blok": "B05/18",
+      "blok": "B5/18",
       "blokGroup": "B5",
       "nomorRumah": "18",
       "nama": "DARMA",
-      "noWhatsapp": "0812-8800-3920",
+      "noWhatsapp": "081210006867",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2870,11 +2880,11 @@
     },
     {
       "id": "res-b5-19",
-      "blok": "B05/19",
+      "blok": "B5/19",
       "blokGroup": "B5",
       "nomorRumah": "19",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006904",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -2936,11 +2946,11 @@
     },
     {
       "id": "res-b5-20",
-      "blok": "B05/20",
+      "blok": "B5/20",
       "blokGroup": "B5",
       "nomorRumah": "20",
       "nama": "DWI ARDIYANTO",
-      "noWhatsapp": "0812-8800-4066",
+      "noWhatsapp": "081210006941",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3002,12 +3012,12 @@
     },
     {
       "id": "res-b5-21",
-      "blok": "B05/21",
+      "blok": "B5/21",
       "blokGroup": "B5",
       "nomorRumah": "21",
       "nama": "HARTONO (BP DONI - HUMAS)",
       "noWhatsapp": "081234567821",
-      "statusHunian": "Dihuni Tetap",
+      "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
       "statusBulanIni": "Belum Bayar",
@@ -3068,11 +3078,11 @@
     },
     {
       "id": "res-b5-22",
-      "blok": "B05/22",
+      "blok": "B5/22",
       "blokGroup": "B5",
       "nomorRumah": "22",
       "nama": "TOMA",
-      "noWhatsapp": "0812-8800-4212",
+      "noWhatsapp": "081210007015",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3134,11 +3144,11 @@
     },
     {
       "id": "res-b5-23",
-      "blok": "B05/23",
+      "blok": "B5/23",
       "blokGroup": "B5",
       "nomorRumah": "23",
       "nama": "ADITYA",
-      "noWhatsapp": "0812-8800-4285",
+      "noWhatsapp": "081210007052",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -3200,12 +3210,12 @@
     },
     {
       "id": "res-b5-24",
-      "blok": "B05/24",
+      "blok": "B5/24",
       "blokGroup": "B5",
       "nomorRumah": "24",
       "nama": "DEDI WAHYUDI (BP WAHYU - HUMAS)",
       "noWhatsapp": "081234567824",
-      "statusHunian": "Dihuni Tetap",
+      "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
       "statusBulanIni": "Belum Bayar",
@@ -3266,11 +3276,11 @@
     },
     {
       "id": "res-b5-25",
-      "blok": "B05/25",
+      "blok": "B5/25",
       "blokGroup": "B5",
       "nomorRumah": "25",
       "nama": "SIGIT",
-      "noWhatsapp": "0812-8800-4431",
+      "noWhatsapp": "081210007126",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3332,11 +3342,11 @@
     },
     {
       "id": "res-b5-26",
-      "blok": "B05/26",
+      "blok": "B5/26",
       "blokGroup": "B5",
       "nomorRumah": "26",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007163",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -3398,11 +3408,11 @@
     },
     {
       "id": "res-b6-01",
-      "blok": "B06/01",
+      "blok": "B6/01",
       "blokGroup": "B6",
       "nomorRumah": "01",
       "nama": "IKBAL",
-      "noWhatsapp": "0812-8800-4577",
+      "noWhatsapp": "081210006355",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -3464,11 +3474,11 @@
     },
     {
       "id": "res-b6-02",
-      "blok": "B06/02",
+      "blok": "B6/02",
       "blokGroup": "B6",
       "nomorRumah": "02",
       "nama": "DEFRY",
-      "noWhatsapp": "0812-8800-4650",
+      "noWhatsapp": "081210006392",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3482,47 +3492,47 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -3541,11 +3551,11 @@
     },
     {
       "id": "res-b6-03",
-      "blok": "B06/03",
+      "blok": "B6/03",
       "blokGroup": "B6",
       "nomorRumah": "03",
       "nama": "BUDYANTO",
-      "noWhatsapp": "0812-8800-4723",
+      "noWhatsapp": "081210006429",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3557,42 +3567,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -3616,38 +3627,44 @@
     },
     {
       "id": "res-b6-04",
-      "blok": "B06/04",
+      "blok": "B6/04",
       "blokGroup": "B6",
       "nomorRumah": "04",
       "nama": "RIDWAN",
-      "noWhatsapp": "0812-8800-4796",
-      "statusHunian": "Rumah Kosong",
+      "noWhatsapp": "081210006466",
+      "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
       "statusBulanIni": "Belum Bayar",
       "bulanMenunggak": [],
       "totalTunggakan": 0,
+      "lastPaymentDate": "2026-09-05",
       "pin": "1234",
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
-          "status": "KOSONG",
-          "amount": 0
+          "status": "LUNAS",
+          "amount": 100000,
+          "paidDate": "2026-09-05"
         },
         "Mar": {
-          "status": "KOSONG",
-          "amount": 0
+          "status": "LUNAS",
+          "amount": 100000,
+          "paidDate": "2026-09-05"
         },
         "Apr": {
-          "status": "KOSONG",
-          "amount": 0
+          "status": "LUNAS",
+          "amount": 100000,
+          "paidDate": "2026-09-05"
         },
         "Mei": {
-          "status": "KOSONG",
-          "amount": 0
+          "status": "LUNAS",
+          "amount": 100000,
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "KOSONG",
@@ -3666,27 +3683,27 @@
           "amount": 0
         },
         "Okt": {
-          "status": "KOSONG",
+          "status": "BELUM_BAYAR",
           "amount": 0
         },
         "Nov": {
-          "status": "KOSONG",
+          "status": "BELUM_BAYAR",
           "amount": 0
         },
         "Des": {
-          "status": "KOSONG",
+          "status": "BELUM_BAYAR",
           "amount": 0
         }
       },
-      "totalSetoran": 0
+      "totalSetoran": 400000
     },
     {
       "id": "res-b6-05",
-      "blok": "B06/05",
+      "blok": "B6/05",
       "blokGroup": "B6",
       "nomorRumah": "05",
       "nama": "ABIDZAR",
-      "noWhatsapp": "0812-8800-4869",
+      "noWhatsapp": "081210006503",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3698,42 +3715,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -3757,11 +3775,11 @@
     },
     {
       "id": "res-b6-06",
-      "blok": "B06/06",
+      "blok": "B6/06",
       "blokGroup": "B6",
       "nomorRumah": "06",
       "nama": "ANGKASA",
-      "noWhatsapp": "0812-8800-4942",
+      "noWhatsapp": "081210006540",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3773,42 +3791,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -3832,11 +3851,11 @@
     },
     {
       "id": "res-b6-07",
-      "blok": "B06/07",
+      "blok": "B6/07",
       "blokGroup": "B6",
       "nomorRumah": "07",
       "nama": "NOVI",
-      "noWhatsapp": "0812-8800-5015",
+      "noWhatsapp": "081210006577",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3850,42 +3869,42 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Sep": {
           "status": "LUNAS",
@@ -3909,11 +3928,11 @@
     },
     {
       "id": "res-b6-08",
-      "blok": "B06/08",
+      "blok": "B6/08",
       "blokGroup": "B6",
       "nomorRumah": "08",
       "nama": "M JODI RAMADHAN",
-      "noWhatsapp": "0812-8800-5088",
+      "noWhatsapp": "081210006614",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -3925,42 +3944,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -3984,11 +4004,11 @@
     },
     {
       "id": "res-b6-09",
-      "blok": "B06/09",
+      "blok": "B6/09",
       "blokGroup": "B6",
       "nomorRumah": "09",
       "nama": "HASMI",
-      "noWhatsapp": "0812-8800-5161",
+      "noWhatsapp": "081210006651",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4000,42 +4020,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -4059,11 +4080,11 @@
     },
     {
       "id": "res-b6-10",
-      "blok": "B06/10",
+      "blok": "B6/10",
       "blokGroup": "B6",
       "nomorRumah": "10",
       "nama": "AJE",
-      "noWhatsapp": "0812-8800-5234",
+      "noWhatsapp": "081210006688",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4077,7 +4098,8 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "KOSONG",
@@ -4090,32 +4112,31 @@
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -4134,11 +4155,11 @@
     },
     {
       "id": "res-b6-11",
-      "blok": "B06/11",
+      "blok": "B6/11",
       "blokGroup": "B6",
       "nomorRumah": "11",
       "nama": "JODI KURNIAWAN",
-      "noWhatsapp": "0812-8800-5307",
+      "noWhatsapp": "081210006725",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4150,42 +4171,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -4209,11 +4231,11 @@
     },
     {
       "id": "res-b6-12",
-      "blok": "B06/12",
+      "blok": "B6/12",
       "blokGroup": "B6",
       "nomorRumah": "12",
       "nama": "RULLY",
-      "noWhatsapp": "0812-8800-5380",
+      "noWhatsapp": "081210006762",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4225,42 +4247,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -4284,11 +4307,11 @@
     },
     {
       "id": "res-b6-13",
-      "blok": "B06/13",
+      "blok": "B6/13",
       "blokGroup": "B6",
       "nomorRumah": "13",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006799",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4350,11 +4373,11 @@
     },
     {
       "id": "res-b6-14",
-      "blok": "B06/14",
+      "blok": "B6/14",
       "blokGroup": "B6",
       "nomorRumah": "14",
-      "nama": "ADE JUHDI",
-      "noWhatsapp": "0812-8800-5526",
+      "nama": "ADE JAHIDI",
+      "noWhatsapp": "081210006836",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4366,42 +4389,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -4425,11 +4449,11 @@
     },
     {
       "id": "res-b6-15",
-      "blok": "B06/15",
+      "blok": "B6/15",
       "blokGroup": "B6",
       "nomorRumah": "15",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006873",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4491,11 +4515,11 @@
     },
     {
       "id": "res-b6-16",
-      "blok": "B06/16",
+      "blok": "B6/16",
       "blokGroup": "B6",
       "nomorRumah": "16",
       "nama": "WIDODO",
-      "noWhatsapp": "0812-8800-5672",
+      "noWhatsapp": "081210006910",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4507,42 +4531,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -4566,11 +4591,11 @@
     },
     {
       "id": "res-b6-17",
-      "blok": "B06/17",
+      "blok": "B6/17",
       "blokGroup": "B6",
       "nomorRumah": "17",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006947",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4632,11 +4657,11 @@
     },
     {
       "id": "res-b6-18",
-      "blok": "B06/18",
+      "blok": "B6/18",
       "blokGroup": "B6",
       "nomorRumah": "18",
       "nama": "SUTRISMAN",
-      "noWhatsapp": "0812-8800-5818",
+      "noWhatsapp": "081210006984",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4648,42 +4673,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -4707,11 +4733,11 @@
     },
     {
       "id": "res-b6-19",
-      "blok": "B06/19",
+      "blok": "B6/19",
       "blokGroup": "B6",
       "nomorRumah": "19",
       "nama": "MUHAMMAD SIDIK",
-      "noWhatsapp": "0812-8800-5891",
+      "noWhatsapp": "081210007021",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4725,47 +4751,47 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -4784,11 +4810,11 @@
     },
     {
       "id": "res-b6-20",
-      "blok": "B06/20",
+      "blok": "B6/20",
       "blokGroup": "B6",
       "nomorRumah": "20",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007058",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4850,11 +4876,11 @@
     },
     {
       "id": "res-b6-21",
-      "blok": "B06/21",
+      "blok": "B6/21",
       "blokGroup": "B6",
       "nomorRumah": "21",
       "nama": "CHOLIL",
-      "noWhatsapp": "0812-8800-6037",
+      "noWhatsapp": "081210007095",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4872,47 +4898,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Jun": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Jul": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -4931,11 +4953,11 @@
     },
     {
       "id": "res-b6-22",
-      "blok": "B06/22",
+      "blok": "B6/22",
       "blokGroup": "B6",
       "nomorRumah": "22",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007132",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -4997,15 +5019,15 @@
     },
     {
       "id": "res-b6-23",
-      "blok": "B06/23",
+      "blok": "B6/23",
       "blokGroup": "B6",
       "nomorRumah": "23",
       "nama": "MULYONO",
-      "noWhatsapp": "0812-8800-6183",
+      "noWhatsapp": "081210007169",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
-      "statusBulanIni": "Lunas",
+      "statusBulanIni": "Belum Bayar",
       "bulanMenunggak": [],
       "totalTunggakan": 0,
       "lastPaymentDate": "2026-09-05",
@@ -5013,46 +5035,47 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
-          "status": "KOSONG",
-          "amount": 0
-        },
-        "Sep": {
           "status": "LUNAS",
           "amount": 100000,
           "paidDate": "2026-09-05"
+        },
+        "Sep": {
+          "status": "KOSONG",
+          "amount": 0
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -5071,11 +5094,11 @@
     },
     {
       "id": "res-b7-01",
-      "blok": "B07/01",
+      "blok": "B7/01",
       "blokGroup": "B7",
       "nomorRumah": "01",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006472",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -5137,11 +5160,11 @@
     },
     {
       "id": "res-b7-02",
-      "blok": "B07/02",
+      "blok": "B7/02",
       "blokGroup": "B7",
       "nomorRumah": "02",
-      "nama": "NOVAL",
-      "noWhatsapp": "0812-8800-6329",
+      "nama": "(Belum Tercatat / Kosong)",
+      "noWhatsapp": "081210006509",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5203,11 +5226,11 @@
     },
     {
       "id": "res-b7-03",
-      "blok": "B07/03",
+      "blok": "B7/03",
       "blokGroup": "B7",
       "nomorRumah": "03",
       "nama": "DEDE NURHIDAYAT",
-      "noWhatsapp": "0812-8800-6402",
+      "noWhatsapp": "081210006546",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5219,42 +5242,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5278,11 +5302,11 @@
     },
     {
       "id": "res-b7-04",
-      "blok": "B07/04",
+      "blok": "B7/04",
       "blokGroup": "B7",
       "nomorRumah": "04",
       "nama": "DEVI",
-      "noWhatsapp": "0812-8800-6475",
+      "noWhatsapp": "081210006583",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5298,42 +5322,40 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Mei": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Jun": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5357,11 +5379,11 @@
     },
     {
       "id": "res-b7-05",
-      "blok": "B07/05",
+      "blok": "B7/05",
       "blokGroup": "B7",
       "nomorRumah": "05",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006620",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5423,11 +5445,11 @@
     },
     {
       "id": "res-b7-06",
-      "blok": "B07/06",
+      "blok": "B7/06",
       "blokGroup": "B7",
       "nomorRumah": "06",
       "nama": "ANDRI",
-      "noWhatsapp": "0812-8800-6621",
+      "noWhatsapp": "081210006657",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5439,42 +5461,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5498,11 +5521,11 @@
     },
     {
       "id": "res-b7-07",
-      "blok": "B07/07",
+      "blok": "B7/07",
       "blokGroup": "B7",
       "nomorRumah": "07",
       "nama": "BAGAS A",
-      "noWhatsapp": "0812-8800-6694",
+      "noWhatsapp": "081210006694",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5514,42 +5537,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5573,60 +5597,58 @@
     },
     {
       "id": "res-b7-08",
-      "blok": "B07/08",
+      "blok": "B7/08",
       "blokGroup": "B7",
       "nomorRumah": "08",
       "nama": "CECEP",
-      "noWhatsapp": "0812-8800-6767",
+      "noWhatsapp": "081210006731",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
       "statusBulanIni": "Lunas",
-      "bulanMenunggak": [
-        "Agustus 2026"
-      ],
-      "totalTunggakan": 100000,
+      "bulanMenunggak": [],
+      "totalTunggakan": 0,
       "lastPaymentDate": "2026-09-05",
       "pin": "1234",
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
-          "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "status": "KOSONG",
+          "amount": 0
         },
         "Sep": {
           "status": "LUNAS",
@@ -5650,11 +5672,11 @@
     },
     {
       "id": "res-b7-09",
-      "blok": "B07/09",
+      "blok": "B7/09",
       "blokGroup": "B7",
       "nomorRumah": "09",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006768",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5716,11 +5738,11 @@
     },
     {
       "id": "res-b7-10",
-      "blok": "B07/10",
+      "blok": "B7/10",
       "blokGroup": "B7",
       "nomorRumah": "10",
       "nama": "AKBAR",
-      "noWhatsapp": "0812-8800-6913",
+      "noWhatsapp": "081210006805",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5732,42 +5754,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5791,11 +5814,11 @@
     },
     {
       "id": "res-b7-11",
-      "blok": "B07/11",
+      "blok": "B7/11",
       "blokGroup": "B7",
       "nomorRumah": "11",
       "nama": "YUKI",
-      "noWhatsapp": "0812-8800-6986",
+      "noWhatsapp": "081210006842",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5807,42 +5830,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5866,11 +5890,11 @@
     },
     {
       "id": "res-b7-12",
-      "blok": "B07/12",
+      "blok": "B7/12",
       "blokGroup": "B7",
       "nomorRumah": "12",
       "nama": "ARGA",
-      "noWhatsapp": "0812-8800-7059",
+      "noWhatsapp": "081210006879",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -5882,7 +5906,8 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "KOSONG",
@@ -5903,17 +5928,17 @@
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -5937,11 +5962,11 @@
     },
     {
       "id": "res-b7-13",
-      "blok": "B07/13",
+      "blok": "B7/13",
       "blokGroup": "B7",
       "nomorRumah": "13",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006916",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6003,11 +6028,11 @@
     },
     {
       "id": "res-b7-14",
-      "blok": "B07/14",
+      "blok": "B7/14",
       "blokGroup": "B7",
       "nomorRumah": "14",
       "nama": "ABDU NAFI",
-      "noWhatsapp": "0812-8800-7205",
+      "noWhatsapp": "081210006953",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6019,42 +6044,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6078,11 +6104,11 @@
     },
     {
       "id": "res-b7-15",
-      "blok": "B07/15",
+      "blok": "B7/15",
       "blokGroup": "B7",
       "nomorRumah": "15",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006990",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6144,10 +6170,10 @@
     },
     {
       "id": "res-b7-16",
-      "blok": "B07/16",
+      "blok": "B7/16",
       "blokGroup": "B7",
       "nomorRumah": "16",
-      "nama": "ANDRIANSYAH (BP ANDRI - BENDAHARA)",
+      "nama": "ANDRIANSYAH (BENDAHARA KAS)",
       "noWhatsapp": "081287654321",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
@@ -6160,42 +6186,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6219,11 +6246,11 @@
     },
     {
       "id": "res-b7-17",
-      "blok": "B07/17",
+      "blok": "B7/17",
       "blokGroup": "B7",
       "nomorRumah": "17",
       "nama": "MUTIARA",
-      "noWhatsapp": "0812-8800-7424",
+      "noWhatsapp": "081210007064",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6235,7 +6262,8 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "KOSONG",
@@ -6244,32 +6272,32 @@
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6293,11 +6321,11 @@
     },
     {
       "id": "res-b7-18",
-      "blok": "B07/18",
+      "blok": "B7/18",
       "blokGroup": "B7",
       "nomorRumah": "18",
       "nama": "MUHAMMAD DAUD SYAH",
-      "noWhatsapp": "0812-8800-7497",
+      "noWhatsapp": "081210007101",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6313,47 +6341,45 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Agt": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Sep": {
           "status": "MENUNGGAK",
-          "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -6372,17 +6398,17 @@
     },
     {
       "id": "res-b7-19",
-      "blok": "B07/19",
+      "blok": "B7/19",
       "blokGroup": "B7",
       "nomorRumah": "19",
       "nama": "SAMSURI",
-      "noWhatsapp": "0812-8800-7570",
+      "noWhatsapp": "081210007138",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
-      "statusBulanIni": "Lunas",
+      "statusBulanIni": "Menunggak",
       "bulanMenunggak": [
-        "Februari 2026"
+        "September 2026"
       ],
       "totalTunggakan": 100000,
       "lastPaymentDate": "2026-09-05",
@@ -6390,47 +6416,47 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
-          "status": "MENUNGGAK",
+          "status": "LUNAS",
           "amount": 100000,
-          "note": "Tagihan belum dibayar"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
-          "status": "LUNAS",
-          "amount": 100000,
-          "paidDate": "2026-09-05"
+          "status": "MENUNGGAK",
+          "amount": 100000
         },
         "Okt": {
           "status": "BELUM_BAYAR",
@@ -6449,11 +6475,11 @@
     },
     {
       "id": "res-b7-20",
-      "blok": "B07/20",
+      "blok": "B7/20",
       "blokGroup": "B7",
       "nomorRumah": "20",
       "nama": "RISKY ALVIN NOVIANTO",
-      "noWhatsapp": "0812-8800-7643",
+      "noWhatsapp": "081210007175",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6465,42 +6491,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6524,11 +6551,11 @@
     },
     {
       "id": "res-b7-21",
-      "blok": "B07/21",
+      "blok": "B7/21",
       "blokGroup": "B7",
       "nomorRumah": "21",
       "nama": "RIZKI NURMANSYAH",
-      "noWhatsapp": "0812-8800-7716",
+      "noWhatsapp": "081210007212",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6540,42 +6567,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6599,11 +6627,11 @@
     },
     {
       "id": "res-b7-22",
-      "blok": "B07/22",
+      "blok": "B7/22",
       "blokGroup": "B7",
       "nomorRumah": "22",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007249",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6665,11 +6693,11 @@
     },
     {
       "id": "res-b7-23",
-      "blok": "B07/23",
+      "blok": "B7/23",
       "blokGroup": "B7",
       "nomorRumah": "23",
       "nama": "SUGIH",
-      "noWhatsapp": "0812-8800-7862",
+      "noWhatsapp": "081210007286",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -6681,42 +6709,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6740,11 +6769,11 @@
     },
     {
       "id": "res-b8-01",
-      "blok": "B08/01",
+      "blok": "B8/01",
       "blokGroup": "B8",
       "nomorRumah": "01",
       "nama": "CANDRA ARIS SANDI",
-      "noWhatsapp": "0812-8800-7935",
+      "noWhatsapp": "081210006589",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -6756,42 +6785,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6815,11 +6845,11 @@
     },
     {
       "id": "res-b8-02",
-      "blok": "B08/02",
+      "blok": "B8/02",
       "blokGroup": "B8",
       "nomorRumah": "02",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006626",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6881,11 +6911,11 @@
     },
     {
       "id": "res-b8-03",
-      "blok": "B08/03",
+      "blok": "B8/03",
       "blokGroup": "B8",
       "nomorRumah": "03",
       "nama": "DICKY",
-      "noWhatsapp": "0812-8800-8081",
+      "noWhatsapp": "081210006663",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -6897,42 +6927,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -6956,11 +6987,11 @@
     },
     {
       "id": "res-b8-04",
-      "blok": "B08/04",
+      "blok": "B8/04",
       "blokGroup": "B8",
       "nomorRumah": "04",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006700",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7022,10 +7053,10 @@
     },
     {
       "id": "res-b8-05",
-      "blok": "B08/05",
+      "blok": "B8/05",
       "blokGroup": "B8",
       "nomorRumah": "05",
-      "nama": "BP IWAN (PEMBINA)",
+      "nama": "IWAN (BP PEMBINA PAGUYUBAN)",
       "noWhatsapp": "081289550805",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
@@ -7038,42 +7069,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -7097,11 +7129,11 @@
     },
     {
       "id": "res-b8-06",
-      "blok": "B08/06",
+      "blok": "B8/06",
       "blokGroup": "B8",
       "nomorRumah": "06",
-      "nama": "BP DENI / DENY (SEKSI OLAH RAGA)",
-      "noWhatsapp": "081234567806",
+      "nama": "DENY (SEKSI OLAHRAGA)",
+      "noWhatsapp": "081210006774",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7113,42 +7145,43 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-02-05"
+          "paidDate": "2026-09-05"
         },
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -7172,11 +7205,11 @@
     },
     {
       "id": "res-b8-07",
-      "blok": "B08/07",
+      "blok": "B8/07",
       "blokGroup": "B8",
       "nomorRumah": "07",
       "nama": "ANI FATIMAH",
-      "noWhatsapp": "0812-8800-8373",
+      "noWhatsapp": "081210006811",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7188,7 +7221,8 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "KOSONG",
@@ -7201,27 +7235,27 @@
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -7245,11 +7279,11 @@
     },
     {
       "id": "res-b8-08",
-      "blok": "B08/08",
+      "blok": "B8/08",
       "blokGroup": "B8",
       "nomorRumah": "08",
       "nama": "BINTANG",
-      "noWhatsapp": "0812-8800-8446",
+      "noWhatsapp": "081210006848",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7261,7 +7295,8 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "KOSONG",
@@ -7270,32 +7305,32 @@
         "Mar": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-03-05"
+          "paidDate": "2026-09-05"
         },
         "Apr": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-04-05"
+          "paidDate": "2026-09-05"
         },
         "Mei": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-05-05"
+          "paidDate": "2026-09-05"
         },
         "Jun": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-06-05"
+          "paidDate": "2026-09-05"
         },
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -7319,11 +7354,11 @@
     },
     {
       "id": "res-b8-09",
-      "blok": "B08/09",
+      "blok": "B8/09",
       "blokGroup": "B8",
       "nomorRumah": "09",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006885",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7385,11 +7420,11 @@
     },
     {
       "id": "res-b8-10",
-      "blok": "B08/10",
+      "blok": "B8/10",
       "blokGroup": "B8",
       "nomorRumah": "10",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006922",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7451,11 +7486,11 @@
     },
     {
       "id": "res-b8-11",
-      "blok": "B08/11",
+      "blok": "B8/11",
       "blokGroup": "B8",
       "nomorRumah": "11",
       "nama": "PA HUSNI",
-      "noWhatsapp": "0812-8800-8665",
+      "noWhatsapp": "081210006959",
       "statusHunian": "Dihuni Tetap",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7467,7 +7502,8 @@
       "monthlyLedger": {
         "Jan": {
           "status": "KOSONG",
-          "amount": 0
+          "amount": 0,
+          "note": "Mulai setor Februari"
         },
         "Feb": {
           "status": "KOSONG",
@@ -7492,12 +7528,12 @@
         "Jul": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-07-05"
+          "paidDate": "2026-09-05"
         },
         "Agt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-08-05"
+          "paidDate": "2026-09-05"
         },
         "Sep": {
           "status": "LUNAS",
@@ -7507,12 +7543,12 @@
         "Okt": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-10-05"
+          "paidDate": "2026-09-05"
         },
         "Nov": {
           "status": "LUNAS",
           "amount": 100000,
-          "paidDate": "2026-11-05"
+          "paidDate": "2026-09-05"
         },
         "Des": {
           "status": "BELUM_BAYAR",
@@ -7523,11 +7559,11 @@
     },
     {
       "id": "res-b8-12",
-      "blok": "B08/12",
+      "blok": "B8/12",
       "blokGroup": "B8",
       "nomorRumah": "12",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006996",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7589,11 +7625,11 @@
     },
     {
       "id": "res-b8-13",
-      "blok": "B08/13",
+      "blok": "B8/13",
       "blokGroup": "B8",
       "nomorRumah": "13",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007033",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7655,11 +7691,11 @@
     },
     {
       "id": "res-b8-14",
-      "blok": "B08/14",
+      "blok": "B8/14",
       "blokGroup": "B8",
       "nomorRumah": "14",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007070",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7721,11 +7757,11 @@
     },
     {
       "id": "res-b8-15",
-      "blok": "B08/15",
+      "blok": "B8/15",
       "blokGroup": "B8",
       "nomorRumah": "15",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007107",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7787,11 +7823,11 @@
     },
     {
       "id": "res-b8-16",
-      "blok": "B08/16",
+      "blok": "B8/16",
       "blokGroup": "B8",
       "nomorRumah": "16",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007144",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7853,11 +7889,11 @@
     },
     {
       "id": "res-b8-17",
-      "blok": "B08/17",
+      "blok": "B8/17",
       "blokGroup": "B8",
       "nomorRumah": "17",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007181",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7919,11 +7955,11 @@
     },
     {
       "id": "res-b8-18",
-      "blok": "B08/18",
+      "blok": "B8/18",
       "blokGroup": "B8",
       "nomorRumah": "18",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007218",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -7985,11 +8021,11 @@
     },
     {
       "id": "res-b8-19",
-      "blok": "B08/19",
+      "blok": "B8/19",
       "blokGroup": "B8",
       "nomorRumah": "19",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007255",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8051,11 +8087,11 @@
     },
     {
       "id": "res-b8-20",
-      "blok": "B08/20",
+      "blok": "B8/20",
       "blokGroup": "B8",
       "nomorRumah": "20",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007292",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8117,11 +8153,11 @@
     },
     {
       "id": "res-b8-21",
-      "blok": "B08/21",
+      "blok": "B8/21",
       "blokGroup": "B8",
       "nomorRumah": "21",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007329",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8183,11 +8219,11 @@
     },
     {
       "id": "res-b8-22",
-      "blok": "B08/22",
+      "blok": "B8/22",
       "blokGroup": "B8",
       "nomorRumah": "22",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007366",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8249,11 +8285,11 @@
     },
     {
       "id": "res-b8-23",
-      "blok": "B08/23",
+      "blok": "B8/23",
       "blokGroup": "B8",
       "nomorRumah": "23",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007403",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -8315,11 +8351,11 @@
     },
     {
       "id": "res-b8-ext-01",
-      "blok": "B08-Ext/01",
+      "blok": "B8X/01",
       "blokGroup": "B8-Ext",
       "nomorRumah": "01",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006589",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -8381,11 +8417,11 @@
     },
     {
       "id": "res-b8-ext-02",
-      "blok": "B08-Ext/02",
+      "blok": "B8X/02",
       "blokGroup": "B8-Ext",
       "nomorRumah": "02",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006626",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8447,11 +8483,11 @@
     },
     {
       "id": "res-b8-ext-03",
-      "blok": "B08-Ext/03",
+      "blok": "B8X/03",
       "blokGroup": "B8-Ext",
       "nomorRumah": "03",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006663",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8513,11 +8549,11 @@
     },
     {
       "id": "res-b8-ext-04",
-      "blok": "B08-Ext/04",
+      "blok": "B8X/04",
       "blokGroup": "B8-Ext",
       "nomorRumah": "04",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006700",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8579,11 +8615,11 @@
     },
     {
       "id": "res-b8-ext-05",
-      "blok": "B08-Ext/05",
+      "blok": "B8X/05",
       "blokGroup": "B8-Ext",
       "nomorRumah": "05",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006737",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8645,11 +8681,11 @@
     },
     {
       "id": "res-b8-ext-06",
-      "blok": "B08-Ext/06",
+      "blok": "B8X/06",
       "blokGroup": "B8-Ext",
       "nomorRumah": "06",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006774",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8711,11 +8747,11 @@
     },
     {
       "id": "res-b8-ext-07",
-      "blok": "B08-Ext/07",
+      "blok": "B8X/07",
       "blokGroup": "B8-Ext",
       "nomorRumah": "07",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006811",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8777,11 +8813,11 @@
     },
     {
       "id": "res-b8-ext-08",
-      "blok": "B08-Ext/08",
+      "blok": "B8X/08",
       "blokGroup": "B8-Ext",
       "nomorRumah": "08",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006848",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8843,11 +8879,11 @@
     },
     {
       "id": "res-b8-ext-09",
-      "blok": "B08-Ext/09",
+      "blok": "B8X/09",
       "blokGroup": "B8-Ext",
       "nomorRumah": "09",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006885",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8909,11 +8945,11 @@
     },
     {
       "id": "res-b8-ext-10",
-      "blok": "B08-Ext/10",
+      "blok": "B8X/10",
       "blokGroup": "B8-Ext",
       "nomorRumah": "10",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006922",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -8975,11 +9011,11 @@
     },
     {
       "id": "res-b8-ext-11",
-      "blok": "B08-Ext/11",
+      "blok": "B8X/11",
       "blokGroup": "B8-Ext",
       "nomorRumah": "11",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006959",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9041,11 +9077,11 @@
     },
     {
       "id": "res-b8-ext-12",
-      "blok": "B08-Ext/12",
+      "blok": "B8X/12",
       "blokGroup": "B8-Ext",
       "nomorRumah": "12",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210006996",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9107,11 +9143,11 @@
     },
     {
       "id": "res-b8-ext-13",
-      "blok": "B08-Ext/13",
+      "blok": "B8X/13",
       "blokGroup": "B8-Ext",
       "nomorRumah": "13",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007033",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9173,11 +9209,11 @@
     },
     {
       "id": "res-b8-ext-14",
-      "blok": "B08-Ext/14",
+      "blok": "B8X/14",
       "blokGroup": "B8-Ext",
       "nomorRumah": "14",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007070",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9239,11 +9275,11 @@
     },
     {
       "id": "res-b8-ext-15",
-      "blok": "B08-Ext/15",
+      "blok": "B8X/15",
       "blokGroup": "B8-Ext",
       "nomorRumah": "15",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007107",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9305,11 +9341,11 @@
     },
     {
       "id": "res-b8-ext-16",
-      "blok": "B08-Ext/16",
+      "blok": "B8X/16",
       "blokGroup": "B8-Ext",
       "nomorRumah": "16",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007144",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9371,11 +9407,11 @@
     },
     {
       "id": "res-b8-ext-17",
-      "blok": "B08-Ext/17",
+      "blok": "B8X/17",
       "blokGroup": "B8-Ext",
       "nomorRumah": "17",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007181",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9437,11 +9473,11 @@
     },
     {
       "id": "res-b8-ext-18",
-      "blok": "B08-Ext/18",
+      "blok": "B8X/18",
       "blokGroup": "B8-Ext",
       "nomorRumah": "18",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007218",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9503,11 +9539,11 @@
     },
     {
       "id": "res-b8-ext-19",
-      "blok": "B08-Ext/19",
+      "blok": "B8X/19",
       "blokGroup": "B8-Ext",
       "nomorRumah": "19",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007255",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9569,11 +9605,11 @@
     },
     {
       "id": "res-b8-ext-20",
-      "blok": "B08-Ext/20",
+      "blok": "B8X/20",
       "blokGroup": "B8-Ext",
       "nomorRumah": "20",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007292",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9635,11 +9671,11 @@
     },
     {
       "id": "res-b8-ext-21",
-      "blok": "B08-Ext/21",
+      "blok": "B8X/21",
       "blokGroup": "B8-Ext",
       "nomorRumah": "21",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007329",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9701,11 +9737,11 @@
     },
     {
       "id": "res-b8-ext-22",
-      "blok": "B08-Ext/22",
+      "blok": "B8X/22",
       "blokGroup": "B8-Ext",
       "nomorRumah": "22",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007366",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Standar",
       "tagihanBulanan": 100000,
@@ -9767,11 +9803,11 @@
     },
     {
       "id": "res-b8-ext-23",
-      "blok": "B08-Ext/23",
+      "blok": "B8X/23",
       "blokGroup": "B8-Ext",
       "nomorRumah": "23",
       "nama": "(Belum Tercatat / Kosong)",
-      "noWhatsapp": "-",
+      "noWhatsapp": "081210007403",
       "statusHunian": "Rumah Kosong",
       "tipeRumah": "Hook",
       "tagihanBulanan": 100000,
@@ -9917,10 +9953,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ASEP SUKARMA (B03/01)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ASEP SUKARMA (B3/01)",
       "wargaId": "res-b3-01",
       "namaWarga": "ASEP SUKARMA",
-      "blokWarga": "B03/01",
+      "blokWarga": "B3/01",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -9934,10 +9970,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SUBHAN HUMAMI (B03/02)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SUBHAN HUMAMI (B3/02)",
       "wargaId": "res-b3-02",
       "namaWarga": "SUBHAN HUMAMI",
-      "blokWarga": "B03/02",
+      "blokWarga": "B3/02",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -9951,10 +9987,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ADITYA PRAYOGA (B03/04)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ADITYA PRAYOGA (B3/04)",
       "wargaId": "res-b3-04",
       "namaWarga": "ADITYA PRAYOGA",
-      "blokWarga": "B03/04",
+      "blokWarga": "B3/04",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -9968,10 +10004,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh AFAN (B03/06)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh AFAN (B3/06)",
       "wargaId": "res-b3-06",
       "namaWarga": "AFAN",
-      "blokWarga": "B03/06",
+      "blokWarga": "B3/06",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -9985,10 +10021,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DION YULIANA (BP ERLANGGA - KETUA) (B03/07)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DION YULIANA (BP ERLANGGA - KETUA) (B3/07)",
       "wargaId": "res-b3-07",
       "namaWarga": "DION YULIANA (BP ERLANGGA - KETUA)",
-      "blokWarga": "B03/07",
+      "blokWarga": "B3/07",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10002,10 +10038,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RAKA (B03/08)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RAKA (B3/08)",
       "wargaId": "res-b3-08",
       "namaWarga": "RAKA",
-      "blokWarga": "B03/08",
+      "blokWarga": "B3/08",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10019,10 +10055,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh PUGUH DWI (B03/12)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh PUGUH DWI (B3/12)",
       "wargaId": "res-b3-12",
       "namaWarga": "PUGUH DWI",
-      "blokWarga": "B03/12",
+      "blokWarga": "B3/12",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10036,10 +10072,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ARDI MAULANA (B03/14)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ARDI MAULANA (B3/14)",
       "wargaId": "res-b3-14",
       "namaWarga": "ARDI MAULANA",
-      "blokWarga": "B03/14",
+      "blokWarga": "B3/14",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10053,10 +10089,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh CASMAT (B03/18)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh CASMAT (B3/18)",
       "wargaId": "res-b3-18",
       "namaWarga": "CASMAT",
-      "blokWarga": "B03/18",
+      "blokWarga": "B3/18",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10070,10 +10106,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SARMA (B03/19)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SARMA (B3/19)",
       "wargaId": "res-b3-19",
       "namaWarga": "SARMA",
-      "blokWarga": "B03/19",
+      "blokWarga": "B3/19",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10087,10 +10123,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ARDIANSYAH ZEIN (B03/20)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ARDIANSYAH ZEIN (B3/20)",
       "wargaId": "res-b3-20",
       "namaWarga": "ARDIANSYAH ZEIN",
-      "blokWarga": "B03/20",
+      "blokWarga": "B3/20",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10104,10 +10140,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DICKY YANDA ALVIANA (B03/22)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DICKY YANDA ALVIANA (B3/22)",
       "wargaId": "res-b3-22",
       "namaWarga": "DICKY YANDA ALVIANA",
-      "blokWarga": "B03/22",
+      "blokWarga": "B3/22",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10121,10 +10157,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh FAISAL (B03/23)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh FAISAL (B3/23)",
       "wargaId": "res-b3-23",
       "namaWarga": "FAISAL",
-      "blokWarga": "B03/23",
+      "blokWarga": "B3/23",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10138,10 +10174,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BUDYANTO (B06/03)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BUDYANTO (B6/03)",
       "wargaId": "res-b6-03",
       "namaWarga": "BUDYANTO",
-      "blokWarga": "B06/03",
+      "blokWarga": "B6/03",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10155,10 +10191,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ABIDZAR (B06/05)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ABIDZAR (B6/05)",
       "wargaId": "res-b6-05",
       "namaWarga": "ABIDZAR",
-      "blokWarga": "B06/05",
+      "blokWarga": "B6/05",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10172,10 +10208,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANGKASA (B06/06)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANGKASA (B6/06)",
       "wargaId": "res-b6-06",
       "namaWarga": "ANGKASA",
-      "blokWarga": "B06/06",
+      "blokWarga": "B6/06",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10189,10 +10225,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh NOVI (B06/07)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh NOVI (B6/07)",
       "wargaId": "res-b6-07",
       "namaWarga": "NOVI",
-      "blokWarga": "B06/07",
+      "blokWarga": "B6/07",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10206,10 +10242,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh M JODI RAMADHAN (B06/08)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh M JODI RAMADHAN (B6/08)",
       "wargaId": "res-b6-08",
       "namaWarga": "M JODI RAMADHAN",
-      "blokWarga": "B06/08",
+      "blokWarga": "B6/08",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10223,10 +10259,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh HASMI (B06/09)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh HASMI (B6/09)",
       "wargaId": "res-b6-09",
       "namaWarga": "HASMI",
-      "blokWarga": "B06/09",
+      "blokWarga": "B6/09",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10240,10 +10276,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh JODI KURNIAWAN (B06/11)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh JODI KURNIAWAN (B6/11)",
       "wargaId": "res-b6-11",
       "namaWarga": "JODI KURNIAWAN",
-      "blokWarga": "B06/11",
+      "blokWarga": "B6/11",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10257,10 +10293,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RULLY (B06/12)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RULLY (B6/12)",
       "wargaId": "res-b6-12",
       "namaWarga": "RULLY",
-      "blokWarga": "B06/12",
+      "blokWarga": "B6/12",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10274,10 +10310,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ADE JUHDI (B06/14)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ADE JAHIDI (B6/14)",
       "wargaId": "res-b6-14",
-      "namaWarga": "ADE JUHDI",
-      "blokWarga": "B06/14",
+      "namaWarga": "ADE JAHIDI",
+      "blokWarga": "B6/14",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10291,10 +10327,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh WIDODO (B06/16)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh WIDODO (B6/16)",
       "wargaId": "res-b6-16",
       "namaWarga": "WIDODO",
-      "blokWarga": "B06/16",
+      "blokWarga": "B6/16",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10308,10 +10344,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SUTRISMAN (B06/18)",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SUTRISMAN (B6/18)",
       "wargaId": "res-b6-18",
       "namaWarga": "SUTRISMAN",
-      "blokWarga": "B06/18",
+      "blokWarga": "B6/18",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10325,10 +10361,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh MULYONO (B06/23)",
-      "wargaId": "res-b6-23",
-      "namaWarga": "MULYONO",
-      "blokWarga": "B06/23",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DEDE NURHIDAYAT (B7/03)",
+      "wargaId": "res-b7-03",
+      "namaWarga": "DEDE NURHIDAYAT",
+      "blokWarga": "B7/03",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10342,10 +10378,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DEDE NURHIDAYAT (B07/03)",
-      "wargaId": "res-b7-03",
-      "namaWarga": "DEDE NURHIDAYAT",
-      "blokWarga": "B07/03",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DEVI (B7/04)",
+      "wargaId": "res-b7-04",
+      "namaWarga": "DEVI",
+      "blokWarga": "B7/04",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10359,10 +10395,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DEVI (B07/04)",
-      "wargaId": "res-b7-04",
-      "namaWarga": "DEVI",
-      "blokWarga": "B07/04",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANDRI (B7/06)",
+      "wargaId": "res-b7-06",
+      "namaWarga": "ANDRI",
+      "blokWarga": "B7/06",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10376,10 +10412,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANDRI (B07/06)",
-      "wargaId": "res-b7-06",
-      "namaWarga": "ANDRI",
-      "blokWarga": "B07/06",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BAGAS A (B7/07)",
+      "wargaId": "res-b7-07",
+      "namaWarga": "BAGAS A",
+      "blokWarga": "B7/07",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10393,10 +10429,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BAGAS A (B07/07)",
-      "wargaId": "res-b7-07",
-      "namaWarga": "BAGAS A",
-      "blokWarga": "B07/07",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh CECEP (B7/08)",
+      "wargaId": "res-b7-08",
+      "namaWarga": "CECEP",
+      "blokWarga": "B7/08",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10410,10 +10446,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh CECEP (B07/08)",
-      "wargaId": "res-b7-08",
-      "namaWarga": "CECEP",
-      "blokWarga": "B07/08",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh AKBAR (B7/10)",
+      "wargaId": "res-b7-10",
+      "namaWarga": "AKBAR",
+      "blokWarga": "B7/10",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10427,10 +10463,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh AKBAR (B07/10)",
-      "wargaId": "res-b7-10",
-      "namaWarga": "AKBAR",
-      "blokWarga": "B07/10",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh YUKI (B7/11)",
+      "wargaId": "res-b7-11",
+      "namaWarga": "YUKI",
+      "blokWarga": "B7/11",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10444,10 +10480,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh YUKI (B07/11)",
-      "wargaId": "res-b7-11",
-      "namaWarga": "YUKI",
-      "blokWarga": "B07/11",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ARGA (B7/12)",
+      "wargaId": "res-b7-12",
+      "namaWarga": "ARGA",
+      "blokWarga": "B7/12",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10461,10 +10497,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ARGA (B07/12)",
-      "wargaId": "res-b7-12",
-      "namaWarga": "ARGA",
-      "blokWarga": "B07/12",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ABDU NAFI (B7/14)",
+      "wargaId": "res-b7-14",
+      "namaWarga": "ABDU NAFI",
+      "blokWarga": "B7/14",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10478,10 +10514,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ABDU NAFI (B07/14)",
-      "wargaId": "res-b7-14",
-      "namaWarga": "ABDU NAFI",
-      "blokWarga": "B07/14",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANDRIANSYAH (BENDAHARA KAS) (B7/16)",
+      "wargaId": "res-b7-16",
+      "namaWarga": "ANDRIANSYAH (BENDAHARA KAS)",
+      "blokWarga": "B7/16",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10495,10 +10531,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANDRIANSYAH (BP ANDRI - BENDAHARA) (B07/16)",
-      "wargaId": "res-b7-16",
-      "namaWarga": "ANDRIANSYAH (BP ANDRI - BENDAHARA)",
-      "blokWarga": "B07/16",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh MUTIARA (B7/17)",
+      "wargaId": "res-b7-17",
+      "namaWarga": "MUTIARA",
+      "blokWarga": "B7/17",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10512,10 +10548,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh MUTIARA (B07/17)",
-      "wargaId": "res-b7-17",
-      "namaWarga": "MUTIARA",
-      "blokWarga": "B07/17",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RISKY ALVIN NOVIANTO (B7/20)",
+      "wargaId": "res-b7-20",
+      "namaWarga": "RISKY ALVIN NOVIANTO",
+      "blokWarga": "B7/20",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10529,10 +10565,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SAMSURI (B07/19)",
-      "wargaId": "res-b7-19",
-      "namaWarga": "SAMSURI",
-      "blokWarga": "B07/19",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RIZKI NURMANSYAH (B7/21)",
+      "wargaId": "res-b7-21",
+      "namaWarga": "RIZKI NURMANSYAH",
+      "blokWarga": "B7/21",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10546,10 +10582,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RISKY ALVIN NOVIANTO (B07/20)",
-      "wargaId": "res-b7-20",
-      "namaWarga": "RISKY ALVIN NOVIANTO",
-      "blokWarga": "B07/20",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SUGIH (B7/23)",
+      "wargaId": "res-b7-23",
+      "namaWarga": "SUGIH",
+      "blokWarga": "B7/23",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10563,10 +10599,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh RIZKI NURMANSYAH (B07/21)",
-      "wargaId": "res-b7-21",
-      "namaWarga": "RIZKI NURMANSYAH",
-      "blokWarga": "B07/21",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh CANDRA ARIS SANDI (B8/01)",
+      "wargaId": "res-b8-01",
+      "namaWarga": "CANDRA ARIS SANDI",
+      "blokWarga": "B8/01",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10580,10 +10616,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh SUGIH (B07/23)",
-      "wargaId": "res-b7-23",
-      "namaWarga": "SUGIH",
-      "blokWarga": "B07/23",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DICKY (B8/03)",
+      "wargaId": "res-b8-03",
+      "namaWarga": "DICKY",
+      "blokWarga": "B8/03",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10597,10 +10633,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh CANDRA ARIS SANDI (B08/01)",
-      "wargaId": "res-b8-01",
-      "namaWarga": "CANDRA ARIS SANDI",
-      "blokWarga": "B08/01",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh IWAN (BP PEMBINA PAGUYUBAN) (B8/05)",
+      "wargaId": "res-b8-05",
+      "namaWarga": "IWAN (BP PEMBINA PAGUYUBAN)",
+      "blokWarga": "B8/05",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "EWALLET_GOPAY",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10614,10 +10650,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DICKY (B08/03)",
-      "wargaId": "res-b8-03",
-      "namaWarga": "DICKY",
-      "blokWarga": "B08/03",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh DENY (SEKSI OLAHRAGA) (B8/06)",
+      "wargaId": "res-b8-06",
+      "namaWarga": "DENY (SEKSI OLAHRAGA)",
+      "blokWarga": "B8/06",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "TRANSFER_MANUAL",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10631,10 +10667,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BP IWAN (PEMBINA) (B08/05)",
-      "wargaId": "res-b8-05",
-      "namaWarga": "BP IWAN (PEMBINA)",
-      "blokWarga": "B08/05",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANI FATIMAH (B8/07)",
+      "wargaId": "res-b8-07",
+      "namaWarga": "ANI FATIMAH",
+      "blokWarga": "B8/07",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "QRIS",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10648,10 +10684,10 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BP DENI / DENY (SEKSI OLAH RAGA) (B08/06)",
-      "wargaId": "res-b8-06",
-      "namaWarga": "BP DENI / DENY (SEKSI OLAH RAGA)",
-      "blokWarga": "B08/06",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BINTANG (B8/08)",
+      "wargaId": "res-b8-08",
+      "namaWarga": "BINTANG",
+      "blokWarga": "B8/08",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_BCA",
       "penanggungJawab": "Sistem Pembayaran Digital",
@@ -10665,52 +10701,26 @@
       "tipe": "PEMASUKAN",
       "kategori": "Iuran IPL Warga",
       "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh ANI FATIMAH (B08/07)",
-      "wargaId": "res-b8-07",
-      "namaWarga": "ANI FATIMAH",
-      "blokWarga": "B08/07",
+      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh PA HUSNI (B8/11)",
+      "wargaId": "res-b8-11",
+      "namaWarga": "PA HUSNI",
+      "blokWarga": "B8/11",
       "bulanDibayar": "Oktober 2026",
       "metodePembayaran": "VA_MANDIRI",
       "penanggungJawab": "Sistem Pembayaran Digital",
       "status": "BERHASIL",
       "noKwitansi": "KW/SK/202610/0053"
-    },
-    {
-      "id": "trx-53",
-      "nomorTransaksi": "TRX-SK-202610-054",
-      "tanggal": "2026-10-26T10:30:00.000Z",
-      "tipe": "PEMASUKAN",
-      "kategori": "Iuran IPL Warga",
-      "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh BINTANG (B08/08)",
-      "wargaId": "res-b8-08",
-      "namaWarga": "BINTANG",
-      "blokWarga": "B08/08",
-      "bulanDibayar": "Oktober 2026",
-      "metodePembayaran": "EWALLET_GOPAY",
-      "penanggungJawab": "Sistem Pembayaran Digital",
-      "status": "BERHASIL",
-      "noKwitansi": "KW/SK/202610/0054"
-    },
-    {
-      "id": "trx-54",
-      "nomorTransaksi": "TRX-SK-202610-055",
-      "tanggal": "2026-10-27T10:30:00.000Z",
-      "tipe": "PEMASUKAN",
-      "kategori": "Iuran IPL Warga",
-      "nominal": 100000,
-      "keterangan": "Pembayaran Iuran IPL Bulan Oktober 2026 oleh PA HUSNI (B08/11)",
-      "wargaId": "res-b8-11",
-      "namaWarga": "PA HUSNI",
-      "blokWarga": "B08/11",
-      "bulanDibayar": "Oktober 2026",
-      "metodePembayaran": "TRANSFER_MANUAL",
-      "penanggungJawab": "Sistem Pembayaran Digital",
-      "status": "BERHASIL",
-      "noKwitansi": "KW/SK/202610/0055"
     }
   ],
   "auditLogs": [
+    {
+      "id": "log-1793524474782",
+      "timestamp": "2026-11-01T09:14:34.782Z",
+      "actor": "Bendahara (Bp. Andriansyah)",
+      "role": "BENDAHARA",
+      "action": "UPDATE_IURAN_SEPTEMBER",
+      "detail": "Sinkronisasi database iuran sampai September 2026. Total masuk B6+B7: Rp 23.500.000."
+    },
     {
       "id": "log-1",
       "timestamp": "2026-10-01T08:00:00.000Z",
@@ -10811,5 +10821,6 @@
       "bri": "1289012040901",
       "bni": "988012040901"
     }
-  }
+  },
+  "version": "2026.09.v4"
 }
