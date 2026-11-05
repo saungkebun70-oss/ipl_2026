@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS users (
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 3. HOUSES TABLE (115 Unit Perumahan Saung Kebun)
+-- 3. HOUSES TABLE (141 Kavling Perumahan Saung Kebun)
 CREATE TABLE IF NOT EXISTS houses (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
@@ -387,7 +387,7 @@ export async function POST(req: NextRequest) {
         </div>
 
         {/* Tab Bar */}
-        <div className="flex items-center gap-1.5 px-4 sm:px-6 pt-3 border-b border-slate-200 bg-slate-50 shrink-0 overflow-x-auto">
+        <div className="flex items-center gap-1.5 px-4 sm:px-6 pt-3 border-b border-slate-200 bg-slate-50 shrink-0 overflow-x-auto no-scrollbar touch-pan-x">
           {[
             { id: 'architecture', label: 'Arsitektur & Concurrency', icon: Layers },
             { id: 'schema', label: 'Skema Database (SQL & RLS)', icon: Database },
@@ -712,7 +712,7 @@ export async function POST(req: NextRequest) {
                   <ul className="text-xs text-slate-600 space-y-2 list-disc list-inside">
                     <li><strong>Persistent Left Sidebar (288px):</strong> Navigasi permanen dengan status akun, shortcut bayar, dan log audit.</li>
                     <li><strong>Buku Kas Ledger Penuh:</strong> Tabel komprehensif, multi-sort, export Excel/PDF, dan filter status.</li>
-                    <li><strong>Analitik Multi-Panel:</strong> Visualisasi grafik tren, pos belanja, dan kepatuhan 115 unit.</li>
+                    <li><strong>Analitik Multi-Panel:</strong> Visualisasi grafik tren, pos belanja, dan kepatuhan 141 kavling warga.</li>
                   </ul>
                 </div>
               </div>

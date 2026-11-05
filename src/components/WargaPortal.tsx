@@ -28,9 +28,11 @@ import {
   Printer,
   X,
   RefreshCw,
-  Info
+  Info,
+  Edit3
 } from 'lucide-react';
 import { Resident, Transaction } from '../types';
+import { updateResidentContact } from '../lib/api';
 
 // ==========================================
 // 1. PROPS INTERFACE & DEFAULT MOCK DATA
@@ -44,6 +46,7 @@ export interface WargaPortalProps {
   onOpenPayModal?: (resident: Resident) => void;
   onOpenReceipt?: (tx: Transaction) => void;
   onOpenSwitchAccount?: () => void;
+  onResidentUpdated?: () => void;
 }
 
 // Built-in standalone demo profiles to ensure the component is 100% self-contained
@@ -131,7 +134,8 @@ export const WargaPortal: React.FC<WargaPortalProps> = ({
   onSelectResident,
   onOpenPayModal,
   onOpenReceipt,
-  onOpenSwitchAccount
+  onOpenSwitchAccount,
+  onResidentUpdated
 }) => {
   // Active resident state with fallback to demo profile
   const [internalResident, setInternalResident] = useState<Resident>(
@@ -146,6 +150,70 @@ export const WargaPortal: React.FC<WargaPortalProps> = ({
   }, [propResident]);
 
   const activeUnit = propResident || internalResident;
+
+  // Contact Update State (Audit Log Triggered)
+  const [isEditContactOpen, setIsEditContactOpen] = useState<boolean>(false);
+  const [editPhone, setEditPhone] = useState<string>(activeUnit.noWhatsapp || '');
+  const [isSavingContact, setIsSavingContact] = useState<boolean>(false);
+  const [contactSuccessMsg, setContactSuccessMsg] = useState<string>('');
+  const [contactErrorMsg, setContactErrorMsg] = useState<string>('');
+
+  const handleOpenEditContact = () => {
+    setEditPhone(activeUnit.noWhatsapp || '');
+    setContactSuccessMsg('');
+    setContactErrorMsg('');
+    setIsEditContactOpen(true);
+  };
+
+  const handleSaveContact = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setContactErrorMsg('');
+    setContactSuccessMsg('');
+
+    const cleanPhone = editPhone.trim();
+    if (!cleanPhone || cleanPhone.length < 9) {
+      setContactErrorMsg('Nomor telepon/WhatsApp minimal 9-10 digit angka.');
+      return;
+    }
+
+    setIsSavingContact(true);
+    try {
+      await updateResidentContact(
+        activeUnit.id,
+        cleanPhone,
+        activeUnit.nama,
+        activeUnit.blok,
+        activeUnit.noWhatsapp
+      );
+
+      // Update internal state immediately
+      setInternalResident(prev => ({
+        ...prev,
+        noWhatsapp: cleanPhone
+      }));
+
+      setContactSuccessMsg(`Nomor WhatsApp berhasil diperbarui ke ${cleanPhone}! Log audit transparansi telah dicatat.`);
+
+      if (onResidentUpdated) {
+        onResidentUpdated();
+      }
+
+      confetti({
+        particleCount: 35,
+        spread: 55,
+        origin: { y: 0.6 }
+      });
+
+      setTimeout(() => {
+        setIsEditContactOpen(false);
+        setContactSuccessMsg('');
+      }, 1800);
+    } catch (err: any) {
+      setContactErrorMsg(err?.message || 'Gagal menyimpan perubahan. Silakan coba lagi.');
+    } finally {
+      setIsSavingContact(false);
+    }
+  };
 
   // Privacy Toggle: show/hide rupiah balance on E-Card
   const [isNominalVisible, setIsNominalVisible] = useState<boolean>(true);
@@ -379,7 +447,7 @@ export const WargaPortal: React.FC<WargaPortalProps> = ({
               <button
                 onClick={onOpenSwitchAccount}
                 className="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-medium transition-colors"
-                title="Pilih dari 115 Warga"
+                title="Pilih dari 141 Kavling Warga"
               >
                 Lainnya...
               </button>
@@ -464,8 +532,17 @@ export const WargaPortal: React.FC<WargaPortalProps> = ({
               <div className="text-sm font-semibold text-slate-200 mt-1 truncate">
                 {activeUnit.nama}
               </div>
-              <div className="text-[11px] text-slate-400 font-mono mt-0.5">
-                WA: {activeUnit.noWhatsapp}
+              <div className="text-[11px] text-slate-300 font-mono mt-0.5 flex flex-wrap items-center gap-2">
+                <span>WA: {activeUnit.noWhatsapp || '-'}</span>
+                <button
+                  type="button"
+                  onClick={handleOpenEditContact}
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[10px] font-semibold transition-colors cursor-pointer"
+                  title="Perbarui nomor telepon / WhatsApp kavling ini"
+                >
+                  <Edit3 className="w-2.5 h-2.5" />
+                  <span>Ubah Kontak</span>
+                </button>
               </div>
             </div>
 
@@ -771,7 +848,46 @@ export const WargaPortal: React.FC<WargaPortalProps> = ({
       </div>
 
       {/* ========================================================= */}
-      {/* E. BANTUAN & KONTAK PENGURUS PAGUYUBAN                    */}
+      {/* E. INFORMASI KONTAK WARGA & LOG AUDIT TRANSPARANSI       */}
+      {/* ========================================================= */}
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-3.5">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 shadow-xs">
+              <Phone className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h4 className="font-bold text-slate-900 text-sm">
+                  Kontak WhatsApp Warga Unit {activeUnit.blok}
+                </h4>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                  Verifikasi Aktif
+                </span>
+              </div>
+              <p className="text-xs text-slate-600 mt-1">
+                Nomor Terdaftar: <span className="font-mono font-bold text-slate-900">{activeUnit.noWhatsapp || '-'}</span> (Atas Nama: <span className="font-semibold text-slate-800">{activeUnit.nama}</span>)
+              </p>
+              <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <span>Setiap pembaruan nomor kontak akan secara otomatis tercatat di <strong>Log Audit Transparansi</strong> untuk koordinasi pos satpam dan bendahara.</span>
+              </p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleOpenEditContact}
+            className="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 shrink-0 cursor-pointer"
+          >
+            <Edit3 className="w-4 h-4 text-emerald-400" />
+            <span>Perbarui Nomor WhatsApp</span>
+          </button>
+        </div>
+      </div>
+
+      {/* ========================================================= */}
+      {/* F. BANTUAN & KONTAK PENGURUS PAGUYUBAN                    */}
       {/* ========================================================= */}
       <div className="p-5 bg-linear-to-r from-emerald-50 via-teal-50 to-slate-50 border border-emerald-200/80 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
         <div className="flex items-center gap-3.5">
@@ -989,6 +1105,117 @@ export const WargaPortal: React.FC<WargaPortalProps> = ({
                 Tutup
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================= */}
+      {/* H. MODAL PERBARUI KONTAK WARGA & LOG AUDIT TRANSPARANSI   */}
+      {/* ========================================================= */}
+      {isEditContactOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 overflow-hidden relative">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
+                  <Edit3 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Perbarui Kontak WhatsApp</h3>
+                  <p className="text-[11px] text-slate-500 font-mono">Unit Kavling {activeUnit.blok}</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsEditContactOpen(false)}
+                className="p-1.5 rounded-xl hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveContact} className="py-4 space-y-4 text-xs">
+              <div className="p-3 bg-slate-50 rounded-2xl border border-slate-100 text-slate-700 space-y-1">
+                <div className="flex justify-between items-center text-[11px]">
+                  <span className="text-slate-500">Nama Kepala Keluarga:</span>
+                  <span className="font-bold text-slate-900">{activeUnit.nama}</span>
+                </div>
+                <div className="flex justify-between items-center text-[11px]">
+                  <span className="text-slate-500">Nomor Saat Ini:</span>
+                  <span className="font-mono text-slate-700">{activeUnit.noWhatsapp || '-'}</span>
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-bold text-slate-800 mb-1">
+                  Nomor WhatsApp / HP Baru
+                </label>
+                <div className="relative">
+                  <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                  <input
+                    type="tel"
+                    required
+                    placeholder="Contoh: 081234567890"
+                    value={editPhone}
+                    onChange={(e) => setEditPhone(e.target.value)}
+                    className="w-full pl-9 pr-3 py-2.5 text-xs font-mono border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+                    autoFocus
+                  />
+                </div>
+                <span className="text-[10px] text-slate-500 mt-1 block">
+                  Pastikan nomor WhatsApp aktif untuk menerima kuitansi digital &amp; konfirmasi satpam.
+                </span>
+              </div>
+
+              {/* Transparency Notice Callout */}
+              <div className="p-3 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 flex items-start gap-2.5">
+                <ShieldCheck className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                <div className="text-[11px] leading-relaxed">
+                  <strong>Pemberitahuan Transparansi:</strong> Perubahan ini akan langsung disimpan ke Cloud Firestore dan memicu pencatatan resmi pada <strong>Log Audit Paguyuban</strong> demi akuntabilitas seluruh warga.
+                </div>
+              </div>
+
+              {contactErrorMsg && (
+                <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-xs flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 shrink-0" />
+                  <span>{contactErrorMsg}</span>
+                </div>
+              )}
+
+              {contactSuccessMsg && (
+                <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
+                  <span>{contactSuccessMsg}</span>
+                </div>
+              )}
+
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsEditContactOpen(false)}
+                  className="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded-xl font-semibold transition-colors cursor-pointer"
+                >
+                  Batal
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSavingContact}
+                  className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white rounded-xl font-bold shadow-md shadow-emerald-600/20 transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                >
+                  {isSavingContact ? (
+                    <>
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                      <span>Menyimpan &amp; Mencatat Audit...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Check className="w-4 h-4" />
+                      <span>Simpan &amp; Catat Audit</span>
+                    </>
+                  )}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

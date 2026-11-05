@@ -166,7 +166,7 @@ export const ResidentDirectory: React.FC<ResidentDirectoryProps> = ({
               Tabel Data Warga Saung Kebun
             </h2>
             <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold font-mono border border-emerald-200">
-              115 UNIT RESMI
+              {residents.length} KAVLING RESMI
             </span>
           </div>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl leading-relaxed">
@@ -178,7 +178,7 @@ export const ResidentDirectory: React.FC<ResidentDirectoryProps> = ({
         <div className="flex flex-wrap items-center gap-2 shrink-0">
           <div className="px-3.5 py-2 rounded-2xl bg-slate-50 border border-slate-200 text-xs">
             <span className="text-[10px] text-slate-500 block uppercase font-mono">Total Warga</span>
-            <span className="font-extrabold text-slate-900 text-sm block font-mono">115 Unit</span>
+            <span className="font-extrabold text-slate-900 text-sm block font-mono">{residents.length} Kavling</span>
           </div>
 
           <div className="px-3.5 py-2 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs">
@@ -208,7 +208,7 @@ export const ResidentDirectory: React.FC<ResidentDirectoryProps> = ({
       <div className="bg-white rounded-3xl border border-slate-200 p-4 sm:p-5 shadow-xs space-y-3.5">
         {/* Blok Buttons Navigation */}
         <div className="flex items-center justify-between gap-3 flex-wrap">
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar touch-pan-x pb-1 sm:pb-0">
             {availableGroups.map(grp => {
               const count = grp === 'ALL' ? residents.length : residents.filter(r => r.blokGroup === grp).length;
               const isSelected = selectedGroup === grp;
@@ -286,7 +286,7 @@ export const ResidentDirectory: React.FC<ResidentDirectoryProps> = ({
               <option value="15">Tampilkan: 15 Data</option>
               <option value="30">Tampilkan: 30 Data</option>
               <option value="50">Tampilkan: 50 Data</option>
-              <option value="0">Tampilkan: Semua (115)</option>
+              <option value="0">Tampilkan: Semua ({residents.length})</option>
             </select>
           </div>
 

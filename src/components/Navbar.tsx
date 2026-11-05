@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   : 'hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
-              Data Warga (115 Unit)
+              Data Warga (141 Kavling)
             </button>
 
             <button
@@ -146,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setActiveTab('residents')}
             className={`py-1 px-2 rounded ${activeTab === 'residents' ? 'text-emerald-700 font-bold bg-emerald-50' : 'text-slate-600'}`}
           >
-            115 Warga
+            141 Kavling
           </button>
           <button
             onClick={() => setActiveTab('warga-portal')}

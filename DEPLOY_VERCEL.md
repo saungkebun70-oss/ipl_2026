@@ -66,3 +66,21 @@ vercel --prod
 - **`api/index.ts`**: Entry point Vercel Serverless Function untuk melayani semua rute backend Express (`/api/summary`, `/api/residents`, `/api/payments/pay`, `/api/webhook/midtrans`).
 - **`.github/workflows/deploy-vercel.yml`**: Automasi pipeline CI/CD GitHub Actions.
 - **`package.json`**: Ditambahkan script `"vercel-build": "vite build"`.
+
+---
+
+## Panduan Akun & Portal Multi-Peran (Warga, Admin, Keamanan):
+Setelah di-deploy ke Vercel, seluruh 4 peran dapat diakses secara mandiri:
+1. **Akun Warga (141 Kavling Hunian)**:
+   - Pilih kavling atau login mandiri dengan No. Blok (contoh: `B03/01`, `B05/21`, `B07/16`) dan PIN default: `1234`.
+   - Fitur: Kartu E-Card IPL, Riwayat Setoran, Bayar Iuran Cepat (QRIS / Virtual Account), Kwitansi Digital.
+2. **Akun Admin Bendahara Kas**:
+   - Profil: **Bp. Andriansyah (B07/16)**
+   - Fitur: Kasir Kas, Matriks Iuran 141 Kavling (Feb-Sept), Catat Belanja Operasional, Cetak Kwitansi, Broadcast WA.
+3. **Akun Admin Ketua Paguyuban**:
+   - Profil: **Bp. Erlangga (B03/07)**
+   - Fitur: Supervisi Anggaran & Kas, Maklumat Resmi Warga, Sensus 141 Kavling, Inspeksi Audit Trail Integritas Data.
+4. **Akun Petugas Keamanan (Satpam & Pos Jaga)**:
+   - Profil: **Bp. Mulyono (Komandan Satpam)** & **Bp. Sugih (Petugas Portal)**
+   - Fitur: Buku Tamu & Kendaraan Masuk (Check-in/Check-out), Panic Button Alarm Darurat, Checklist Ronda Malam & Kontrol PJU, Interkom Kontak Kavling.
+

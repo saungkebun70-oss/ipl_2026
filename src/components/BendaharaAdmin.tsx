@@ -11,7 +11,10 @@ import {
   Clock,
   Download,
   CreditCard,
-  MessageSquare
+  MessageSquare,
+  KeyRound,
+  Globe,
+  Share2
 } from 'lucide-react';
 import { Resident, Transaction } from '../types';
 import { formatRupiah, sendBillingReminder, submitExpense } from '../lib/api';
@@ -21,13 +24,17 @@ interface BendaharaAdminProps {
   transactions: Transaction[];
   onOpenPayForResident: (resident: Resident) => void;
   onRefreshData: () => void;
+  onOpenAccountManager?: () => void;
+  onOpenShareApp?: () => void;
 }
 
 export const BendaharaAdmin: React.FC<BendaharaAdminProps> = ({
   residents,
   transactions,
   onOpenPayForResident,
-  onRefreshData
+  onRefreshData,
+  onOpenAccountManager,
+  onOpenShareApp
 }) => {
   const [selectedGroup, setSelectedGroup] = useState<string>('ALL');
   const [selectedStatus, setSelectedStatus] = useState<string>('ALL');
@@ -148,22 +155,46 @@ export const BendaharaAdmin: React.FC<BendaharaAdminProps> = ({
   return (
     <div className="space-y-6">
       {/* Header Panel */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl font-bold text-slate-900">
-              Dashboard Pengurus & Bendahara Kas
-            </h2>
-            <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800 text-xs font-bold">
-              ADMIN KEUANGAN
+      <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 rounded-3xl border border-blue-800/40 p-6 text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative z-10">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold border border-blue-400/30">
+              PANEL KHUSUS BENDAHARA
+            </span>
+            <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/30">
+              KASIR &amp; KEUANGAN
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-1">
-            Kelola data 115 unit rumah, input pengeluaran operasional, verifikasi setoran, dan kirim pengingat WhatsApp otomatis.
+          <h1 className="text-2xl font-black text-white tracking-tight">
+            Panel Kasir &amp; Pembukuan Bendahara Kas
+          </h1>
+          <p className="text-xs text-blue-200/80 mt-1 max-w-2xl leading-relaxed">
+            <strong>Bp. Andriansyah (Blok B07/16)</strong> · Penerimaan setoran iuran tunai, penerbitan kwitansi resmi, pencatatan pengeluaran kas operasional, dan penagihan WhatsApp otomatis bagi warga Saung Kebun.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
+          {onOpenAccountManager && (
+            <button
+              onClick={onOpenAccountManager}
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-xs cursor-pointer border border-blue-400/40"
+            >
+              <KeyRound className="w-4 h-4 text-blue-200" />
+              <span>Kelola Akun Warga (141)</span>
+            </button>
+          )}
+
+          {onOpenShareApp && (
+            <button
+              onClick={onOpenShareApp}
+              className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-xs cursor-pointer border border-teal-400/40"
+            >
+              <Share2 className="w-4 h-4 text-teal-200" />
+              <span>Bagikan Tautan Warga</span>
+            </button>
+          )}
+
           <button
             onClick={() => setShowExpenseModal(true)}
             className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5 shadow-xs"

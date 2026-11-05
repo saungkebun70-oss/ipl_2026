@@ -138,24 +138,24 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
   return (
     <div className="space-y-5 sm:space-y-6">
       {/* Top Banner / Hero Glance */}
-      <div className="bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-950 rounded-2xl sm:rounded-3xl p-5 sm:p-7 text-white relative overflow-hidden shadow-sm">
+      <div className="bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-950 rounded-2xl sm:rounded-3xl p-4 sm:p-7 text-white relative overflow-hidden shadow-xs">
         <div className="relative z-10 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold mb-2.5 border border-emerald-400/20 backdrop-blur-xs">
-            <Shield className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-semibold mb-2 border border-emerald-400/20 backdrop-blur-xs">
+            <Shield className="w-3 h-3 text-emerald-400" />
             <span>Transparansi Kas Real-time · Saung Kebun</span>
           </div>
 
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight">
-            Dashboard Keuangan & Laporan IPL
+          <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold tracking-tight">
+            Dashboard Keuangan &amp; Laporan IPL
           </h1>
-          <p className="text-emerald-100/80 text-xs sm:text-sm mt-1.5 leading-relaxed">
-            Keterbukaan dana iuran warga Perumahan Saung Kebun. Setiap rupiah tercatat real-time dan dialokasikan untuk keamanan 24 jam, kebersihan, dan penerangan 115 unit rumah.
+          <p className="text-emerald-100/80 text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2 sm:line-clamp-none">
+            Keterbukaan dana iuran warga Perumahan Saung Kebun. Setiap rupiah tercatat real-time dan dialokasikan untuk keamanan 24 jam, kebersihan, dan penerangan {residents.length || 141} unit kavling.
           </p>
 
-          <div className="flex flex-wrap items-center gap-2.5 mt-4 sm:mt-5">
+          <div className="flex flex-wrap items-center gap-2 mt-3.5 sm:mt-5">
             <button
               onClick={onOpenPayModal}
-              className="px-4 py-2.5 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer"
+              className="flex-1 sm:flex-none px-4 py-2.5 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <span>Bayar Iuran IPL Digital</span>
             </button>
@@ -163,18 +163,19 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
             {isBendaharaOrKetua && onOpenAddExpense && (
               <button
                 onClick={onOpenAddExpense}
-                className="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl border border-white/20 transition-colors cursor-pointer"
+                className="px-3.5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl border border-white/20 transition-colors cursor-pointer"
               >
-                + Catat Belanja Kas
+                + Catat Belanja
               </button>
             )}
 
             <button
               onClick={() => window.print()}
-              className="px-3.5 py-2.5 bg-white/5 hover:bg-white/15 text-emerald-200 text-xs rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer"
+              aria-label="Cetak Laporan"
+              className="p-2.5 sm:px-3.5 sm:py-2.5 bg-white/5 hover:bg-white/15 text-emerald-200 text-xs rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <Printer className="w-4 h-4" />
-              <span className="hidden sm:inline">Cetak Laporan</span>
+              <span className="hidden sm:inline">Cetak</span>
             </button>
           </div>
         </div>
@@ -183,13 +184,13 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
         <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
       </div>
 
-      {/* Segmented Intuitive Panel Filter (For quick jumping between sections) */}
-      <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar p-1 bg-slate-200/60 rounded-2xl w-full">
+      {/* Segmented Intuitive Panel Filter (Clean mobile carousel without browser scrollbars) */}
+      <div className="flex items-center gap-1.5 overflow-x-auto p-1 bg-slate-200/70 rounded-2xl w-full no-scrollbar touch-pan-x">
         {[
           { id: 'all', label: 'Semua Panel', icon: Layers },
           { id: 'charts', label: 'Arus Kas & Belanja', icon: BarChart3 },
           { id: 'officers', label: 'Struktur Pengurus', icon: Award },
-          { id: 'blocks', label: 'Kepatuhan Blok (115)', icon: Users },
+          { id: 'blocks', label: `Kepatuhan Blok (${residents.length || 141})`, icon: Users },
           { id: 'ledger', label: 'Buku Kas Ledger', icon: BookOpen },
         ].map((item) => {
           const Icon = item.icon;
@@ -198,9 +199,9 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
             <button
               key={item.id}
               onClick={() => setActivePanelFilter(item.id as any)}
-              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
                 isActive
-                  ? 'bg-white text-slate-900 shadow-sm font-bold'
+                  ? 'bg-white text-slate-900 shadow-xs font-bold'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
               }`}
             >
@@ -211,78 +212,78 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
         })}
       </div>
 
-      {/* KPI Cards Grid (4 Modern Glassmorphism Cards) */}
+      {/* KPI Cards Grid (Ergonomic 2x2 on mobile, 4-column on desktop) */}
       {(activePanelFilter === 'all' || activePanelFilter === 'charts') && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
           {/* Card 1: Saldo Kas */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-emerald-300 transition-colors">
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-emerald-300 transition-colors">
             <div className="flex items-center justify-between text-slate-500">
-              <span className="text-xs font-semibold">Total Saldo Kas Berjalan</span>
-              <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                <Wallet className="w-4 h-4" />
+              <span className="text-[11px] sm:text-xs font-semibold truncate">Total Saldo Kas</span>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                <Wallet className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-            <div className="mt-3">
-              <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight">
+            <div className="mt-2 sm:mt-3">
+              <div className="text-base sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight truncate">
                 {summary ? formatRupiah(summary.saldoKasSaatIni) : '...'}
               </div>
-              <div className="flex items-center gap-1 text-[11px] text-emerald-700 mt-1 font-semibold">
-                <TrendingUp className="w-3.5 h-3.5 shrink-0" />
-                <span>Kondisi Kas Surplus & Sehat</span>
+              <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-emerald-700 mt-1 font-semibold truncate">
+                <TrendingUp className="w-3 h-3 shrink-0" />
+                <span>Kas Surplus &amp; Sehat</span>
               </div>
             </div>
           </div>
 
           {/* Card 2: Pemasukan Bulan Ini */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-teal-300 transition-colors">
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-teal-300 transition-colors">
             <div className="flex items-center justify-between text-slate-500">
-              <span className="text-xs font-semibold">Pemasukan Bulan Ini</span>
-              <div className="w-8 h-8 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center">
-                <ArrowUpRight className="w-4 h-4" />
+              <span className="text-[11px] sm:text-xs font-semibold truncate">Pemasukan Bulan Ini</span>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-            <div className="mt-3">
-              <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight">
+            <div className="mt-2 sm:mt-3">
+              <div className="text-base sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight truncate">
                 {summary ? formatRupiah(summary.totalPemasukanBulanIni) : '...'}
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">
-                Target iuran: <span className="font-mono text-slate-700">{summary ? formatRupiah(summary.targetKasBulanIni) : '...'}</span>
+              <div className="text-[10px] sm:text-[11px] text-slate-500 mt-1 truncate">
+                Target: {summary ? formatRupiah(summary.targetKasBulanIni) : '...'}
               </div>
             </div>
           </div>
 
           {/* Card 3: Belanja Operasional */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-rose-300 transition-colors">
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-rose-300 transition-colors">
             <div className="flex items-center justify-between text-slate-500">
-              <span className="text-xs font-semibold">Belanja Operasional</span>
-              <div className="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
-                <ArrowDownRight className="w-4 h-4" />
+              <span className="text-[11px] sm:text-xs font-semibold truncate">Belanja Operasional</span>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+                <ArrowDownRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-            <div className="mt-3">
-              <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight">
+            <div className="mt-2 sm:mt-3">
+              <div className="text-base sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight truncate">
                 {summary ? formatRupiah(summary.totalPengeluaranBulanIni) : '...'}
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">
-                Satpam 24 Jam, Truk Sampah, & PJU
+              <div className="text-[10px] sm:text-[11px] text-slate-500 mt-1 truncate">
+                Satpam, Sampah, PJU
               </div>
             </div>
           </div>
 
           {/* Card 4: Kepatuhan Bayar IPL */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-blue-300 transition-colors">
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-blue-300 transition-colors">
             <div className="flex items-center justify-between text-slate-500">
-              <span className="text-xs font-semibold">Tingkat Kepatuhan Warga</span>
-              <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                <Users className="w-4 h-4" />
+              <span className="text-[11px] sm:text-xs font-semibold truncate">Kepatuhan Warga</span>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-            <div className="mt-3">
-              <div className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight">
+            <div className="mt-2 sm:mt-3">
+              <div className="text-base sm:text-2xl font-extrabold text-slate-900 font-mono tabular-nums tracking-tight">
                 {summary ? `${summary.persentaseKepatuhan}%` : '...'}
               </div>
-              <div className="text-[11px] text-slate-600 mt-1">
-                <strong className="text-emerald-700 font-semibold">{summary?.totalWargaLunas || 0}</strong> dari {summary?.totalWarga || 115} rumah sudah lunas
+              <div className="text-[10px] sm:text-[11px] text-slate-600 mt-1 truncate">
+                <strong className="text-emerald-700 font-semibold">{summary?.totalWargaLunas || 0}</strong> dari {summary?.totalWarga || residents.length || 141} lunas
               </div>
             </div>
           </div>
@@ -519,14 +520,14 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
               <h3 className="text-sm font-bold text-slate-900">
-                Kepatuhan Iuran Per Blok Hunian (115 Unit)
+                Kepatuhan Iuran Per Blok Hunian ({residents.length || 141} Unit)
               </h3>
               <p className="text-xs text-slate-500">
-                Tingkat ketertiban pembayaran di Blok A, B, C, D, dan E
+                Tingkat ketertiban pembayaran di Blok B3, B5, B6, B7, B8, dan Cadangan
               </p>
             </div>
             <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md self-start sm:self-auto">
-              Total 115 Rumah Terdaftar
+              Total {residents.length || 141} Kavling Terdaftar
             </span>
           </div>
 

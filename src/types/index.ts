@@ -1,4 +1,38 @@
-export type Role = 'KETUA' | 'BENDAHARA' | 'WARGA';
+export type Role = 'KETUA' | 'BENDAHARA' | 'WARGA' | 'KEAMANAN';
+export type AppTab = 'overview' | 'residents' | 'warga-portal' | 'bendahara' | 'ketua' | 'keamanan';
+
+export interface GuestLog {
+  id: string;
+  namaTamu: string;
+  jenisTamu: 'Tamu Keluarga' | 'Kurir / Paket' | 'Ojek / Taksi Online' | 'Tukang / Renovasi' | 'Instansi / Lainnya';
+  kendaraan: 'Mobil' | 'Motor' | 'Truk / Pikap' | 'Jalan Kaki';
+  platNomor: string;
+  blokTujuan: string;
+  keperluan: string;
+  waktuMasuk: string;
+  waktuKeluar?: string;
+  status: 'DI_DALAM' | 'SUDAH_KELUAR';
+  petugasJaga: string;
+}
+
+export interface PatrolLog {
+  id: string;
+  waktu: string;
+  petugas: string;
+  rute: string;
+  kondisi: 'Aman Terkendali' | 'PJU / Lampu Padam' | 'Pagar / Pintu Terbuka' | 'Mencurigakan' | 'Lainnya';
+  catatan: string;
+}
+
+export interface EmergencyAlert {
+  id: string;
+  waktu: string;
+  tipe: 'KEBAKARAN' | 'MEDIS' | 'PENCURIAN' | 'BENCANA';
+  lokasi: string;
+  pelapor: string;
+  deskripsi: string;
+  status: 'AKTIF' | 'DITANGANI' | 'SELESAI';
+}
 
 export type MonthPaymentStatus = 'LUNAS' | 'MENUNGGAK' | 'KOSONG' | 'BELUM_BAYAR';
 export type MonthKey = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'Mei' | 'Jun' | 'Jul' | 'Agt' | 'Sep' | 'Okt' | 'Nov' | 'Des';

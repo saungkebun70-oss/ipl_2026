@@ -31,7 +31,10 @@ import {
   SlidersHorizontal,
   DollarSign,
   Trash2,
-  Plus
+  Plus,
+  Copy,
+  Send,
+  Share2
 } from 'lucide-react';
 import { Resident, MonthKey, MonthPaymentStatus } from '../types';
 import {
@@ -138,6 +141,41 @@ export const DatabaseWarga: React.FC<DatabaseWargaProps> = ({
     currentAmount: number;
   } | null>(null);
   const [isUpdatingCell, setIsUpdatingCell] = useState(false);
+
+  // Direct Resident Link state & helpers
+  const [copiedResId, setCopiedResId] = useState<string | null>(null);
+
+  const getResidentDirectUrl = (r: Resident) => {
+    const origin = typeof window !== 'undefined' && window.location.origin
+      ? window.location.origin
+      : 'https://ais-pre-vzvdelmarjckvrvre247vh-697510650478.asia-southeast1.run.app';
+    return `${origin}/?blok=${encodeURIComponent(r.blok)}&pin=${r.pin || '1234'}`;
+  };
+
+  const handleCopyResidentLink = (r: Resident) => {
+    const url = getResidentDirectUrl(r);
+    navigator.clipboard.writeText(url);
+    setCopiedResId(r.id);
+    setSyncToast({
+      message: `Tautan Akses Langsung Kavling ${r.blok} (${r.nama}) berhasil disalin!`,
+      type: 'success'
+    });
+    setTimeout(() => {
+      setCopiedResId(null);
+      setSyncToast(null);
+    }, 3000);
+  };
+
+  const handleSendWaResidentLink = (r: Resident) => {
+    const url = getResidentDirectUrl(r);
+    const msg = `Assalamu'alaikum Wr. Wb. Bpk/Ibu *${r.nama}* (Kavling *${r.blok}*),\n\nBerikut tautan akses langsung resmi *Portal SIPL Saung Kebun* Anda:\n\n🏠 *Kavling*: ${r.blok}\n👤 *Nama*: ${r.nama}\n🔑 *PIN*: ${r.pin || '1234'}\n\n👉 *Klik Tautan Masuk Otomatis*:\n${url}\n\nCukup klik tautan di atas untuk melihat status iuran, konfirmasi pembayaran via QRIS, dan unduh kwitansi digital. Terima kasih!\n- *Pengurus Paguyuban Saung Kebun*`;
+    const cleanPhone = r.noWhatsapp.replace(/[^0-9]/g, '');
+    const waPhone = cleanPhone.startsWith('0') ? '62' + cleanPhone.slice(1) : cleanPhone;
+    const waUrl = waPhone
+      ? `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`
+      : `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    window.open(waUrl, '_blank');
+  };
 
   // Helper check if resident is empty / belum tercatat
   const isResidentEmpty = (r: Resident) => {
@@ -670,39 +708,39 @@ export const DatabaseWarga: React.FC<DatabaseWargaProps> = ({
         {/* ======================================================== */}
         {/* STATS OVERVIEW CARDS */}
         {/* ======================================================== */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6 pt-6 border-t border-white/10">
-          <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
-            <p className="text-xs text-slate-400 font-medium">Total Iuran Terkumpul 2026</p>
-            <p className="text-xl font-bold text-emerald-400 mt-1">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 mt-6 pt-5 border-t border-white/10">
+          <div className="bg-white/5 rounded-xl p-3 sm:p-3.5 border border-white/10 min-w-0 overflow-hidden flex flex-col justify-between">
+            <p className="text-[11px] sm:text-xs text-slate-400 font-medium truncate">Total Iuran Terkumpul</p>
+            <p className="text-sm xs:text-base sm:text-lg lg:text-xl font-extrabold font-mono tracking-tight text-emerald-400 mt-1 truncate" title={formatRupiah(matrixStats.grandTotalPaid)}>
               {formatRupiah(matrixStats.grandTotalPaid)}
             </p>
-            <p className="text-[11px] text-slate-400 mt-0.5">B6+B7: Rp 23.500.000 (sesuai sheet)</p>
+            <p className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 truncate">B6+B7: Rp 23.500.000</p>
           </div>
 
-          <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
-            <p className="text-xs text-slate-400 font-medium">Total Tunggakan Warga</p>
-            <p className="text-xl font-bold text-amber-400 mt-1">
+          <div className="bg-white/5 rounded-xl p-3 sm:p-3.5 border border-white/10 min-w-0 overflow-hidden flex flex-col justify-between">
+            <p className="text-[11px] sm:text-xs text-slate-400 font-medium truncate">Total Tunggakan Warga</p>
+            <p className="text-sm xs:text-base sm:text-lg lg:text-xl font-extrabold font-mono tracking-tight text-amber-400 mt-1 truncate" title={formatRupiah(matrixStats.grandTotalMenunggak)}>
               {formatRupiah(matrixStats.grandTotalMenunggak)}
             </p>
-            <p className="text-[11px] text-amber-300/80 mt-0.5">Posisi sel kuning di buku kas</p>
+            <p className="text-[10px] sm:text-[11px] text-amber-300/80 mt-0.5 truncate">Posisi sel kuning di buku kas</p>
           </div>
 
-          <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
-            <p className="text-xs text-slate-400 font-medium">Hunian Terisi vs Kosong</p>
-            <p className="text-xl font-bold text-white mt-1">
-              {matrixStats.occupiedCount} <span className="text-xs font-normal text-slate-400">/ {residents.length} Kavling</span>
+          <div className="bg-white/5 rounded-xl p-3 sm:p-3.5 border border-white/10 min-w-0 overflow-hidden flex flex-col justify-between">
+            <p className="text-[11px] sm:text-xs text-slate-400 font-medium truncate">Hunian Terisi vs Kosong</p>
+            <p className="text-sm xs:text-base sm:text-lg lg:text-xl font-extrabold font-mono tracking-tight text-white mt-1 truncate">
+              {matrixStats.occupiedCount} <span className="text-[11px] sm:text-xs font-normal text-slate-400">/ {residents.length}</span>
             </p>
-            <p className="text-[11px] text-slate-400 mt-0.5">{matrixStats.vacantCount} unit rumah kosong / merah</p>
+            <p className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 truncate">{matrixStats.vacantCount} unit kosong / merah</p>
           </div>
 
-          <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
-            <p className="text-xs text-slate-400 font-medium">Kepatuhan Periode Berjalan</p>
-            <p className="text-xl font-bold text-cyan-400 mt-1">
+          <div className="bg-white/5 rounded-xl p-3 sm:p-3.5 border border-white/10 min-w-0 overflow-hidden flex flex-col justify-between">
+            <p className="text-[11px] sm:text-xs text-slate-400 font-medium truncate">Kepatuhan Periode</p>
+            <p className="text-sm xs:text-base sm:text-lg lg:text-xl font-extrabold font-mono tracking-tight text-cyan-400 mt-1 truncate">
               {matrixStats.occupiedCount > 0
                 ? Math.round((residents.filter(r => r.statusBulanIni === 'Lunas').length / matrixStats.occupiedCount) * 100)
                 : 0}%
             </p>
-            <p className="text-[11px] text-cyan-300/80 mt-0.5">September 2026</p>
+            <p className="text-[10px] sm:text-[11px] text-cyan-300/80 mt-0.5 truncate">September 2026</p>
           </div>
         </div>
       </div>
@@ -737,60 +775,59 @@ export const DatabaseWarga: React.FC<DatabaseWargaProps> = ({
       {/* 2. TAB CONTROLS & COLOR LEGEND BAR */}
       {/* ======================================================== */}
       <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-slate-100">
           {/* Tab Switcher */}
-          <div className="inline-flex p-1 bg-slate-100 rounded-xl">
+          <div className="flex w-full sm:w-auto p-1 bg-slate-100 rounded-xl">
             <button
               onClick={() => setActiveTab('MATRIX')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'MATRIX'
-                  ? 'bg-emerald-600 text-white shadow-sm'
+                  ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <FileSpreadsheet className="w-4 h-4" />
-              <span>Matriks Iuran Bulanan (Jan - Des)</span>
+              <span>Matriks Iuran (Jan - Des)</span>
             </button>
             <button
               onClick={() => setActiveTab('TABLE')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'TABLE'
-                  ? 'bg-emerald-600 text-white shadow-sm'
+                  ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <TableIcon className="w-4 h-4" />
-              <span>Daftar & Profil Warga</span>
+              <span>Daftar &amp; Profil Warga</span>
             </button>
           </div>
 
-          {/* Color Legend (Sesuai Aturan User) */}
-          <div className="flex flex-wrap items-center gap-2.5 text-xs">
-            <span className="font-semibold text-slate-600">Panduan Warna:</span>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold shadow-2xs">
+          {/* Color Legend (Responsive horizontal carousel) */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-[11px] sm:text-xs no-scrollbar touch-pan-x">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold shadow-2xs shrink-0">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
               <span>100.000 (Lunas)</span>
             </div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-100 text-amber-950 border border-amber-300 font-extrabold shadow-2xs">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-100 text-amber-950 border border-amber-300 font-extrabold shadow-2xs shrink-0">
               <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-              <span>Menunggak (Baris Kuning)</span>
+              <span>Menunggak (Kuning)</span>
             </div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-50 text-slate-600 border border-slate-200 font-semibold shadow-2xs">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-50 text-slate-600 border border-slate-200 font-semibold shadow-2xs shrink-0">
               <span className="w-2.5 h-2.5 rounded-full bg-slate-400" />
-              <span>(-) Kosong / Tanpa Tagihan</span>
+              <span>(-) Kosong</span>
             </div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 border border-slate-200 font-medium">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 border border-slate-200 font-medium shrink-0">
               <span className="w-2.5 h-2.5 rounded-full bg-slate-400" />
-              <span>(-) Jan (Mulai Feb)</span>
+              <span>(-) Jan Mulai Feb</span>
             </div>
           </div>
         </div>
 
         {/* Filter Toolbar */}
-        <div className="pt-4 flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
-          {/* Block Selection Pills */}
-          <div className="flex flex-wrap gap-1.5 items-center">
-            <span className="text-xs font-semibold text-slate-500 mr-1">Filter Blok:</span>
+        <div className="pt-3 flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
+          {/* Block Selection Pills (No scrollbar touch carousel) */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar touch-pan-x">
+            <span className="text-xs font-semibold text-slate-500 mr-1 shrink-0">Blok:</span>
             {availableGroups.map(grp => (
               <button
                 key={grp}
@@ -798,9 +835,9 @@ export const DatabaseWarga: React.FC<DatabaseWargaProps> = ({
                   setSelectedGroup(grp);
                   setCurrentPage(1);
                 }}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition-all cursor-pointer ${
                   selectedGroup === grp
-                    ? 'bg-slate-900 text-white shadow-sm'
+                    ? 'bg-slate-900 text-white shadow-xs'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
               >
@@ -1221,6 +1258,7 @@ export const DatabaseWarga: React.FC<DatabaseWargaProps> = ({
                   <th className="py-3 px-3 text-right">Tarif IPL</th>
                   <th className="py-3 px-3 text-center">Status Bulan Ini</th>
                   <th className="py-3 px-3 text-right">Tunggakan</th>
+                  <th className="py-3 px-3 text-center">Tautan Akun Warga</th>
                   <th className="py-3 px-3 text-center">Aksi</th>
                 </tr>
               </thead>
@@ -1330,6 +1368,37 @@ export const DatabaseWarga: React.FC<DatabaseWargaProps> = ({
                           <span className="text-amber-600">{formatRupiah(r.totalTunggakan)}</span>
                         ) : (
                           <span className="text-slate-400 font-normal">Rp 0</span>
+                        )}
+                      </td>
+
+                      <td className="py-3 px-3 text-center whitespace-nowrap">
+                        {empty ? (
+                          <span className="text-[11px] text-slate-400 italic">Kavling Kosong</span>
+                        ) : (
+                          <div className="flex items-center justify-center gap-1.5">
+                            <button
+                              onClick={() => handleCopyResidentLink(r)}
+                              className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${
+                                copiedResId === r.id
+                                  ? 'bg-emerald-600 text-white'
+                                  : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200'
+                              }`}
+                              title={`Salin tautan login otomatis untuk ${r.nama} (Blok ${r.blok})`}
+                            >
+                              {copiedResId === r.id ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5 text-emerald-700" />}
+                              <span>{copiedResId === r.id ? 'Tersalin!' : 'Salin Link'}</span>
+                            </button>
+
+                            {r.noWhatsapp && r.noWhatsapp !== '-' && (
+                              <button
+                                onClick={() => handleSendWaResidentLink(r)}
+                                className="p-1.5 rounded-lg bg-teal-50 hover:bg-teal-100 text-teal-700 border border-teal-200 transition-colors cursor-pointer"
+                                title={`Kirim tautan portal langsung via WhatsApp ke ${r.noWhatsapp}`}
+                              >
+                                <Send className="w-3.5 h-3.5" />
+                              </button>
+                            )}
+                          </div>
                         )}
                       </td>
 

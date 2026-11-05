@@ -2,6 +2,8 @@ import { FinancialSummary, Resident, Transaction, AuditLog, WhatsAppNotification
 import {
   addResidentToFirestore,
   updateResidentInFirestore,
+  updateResidentContactInFirestore,
+  updateResidentPinInFirestore,
   deleteResidentFromFirestore,
   updateResidentMonthStatusInFirestore,
   recordPaymentInFirestore,
@@ -90,6 +92,62 @@ export async function updateResident(id: string, updates: Partial<Resident>): Pr
 
   return { id, ...updates } as Resident;
 }
+
+// Update resident contact info directly with an audit log record
+export async function updateResidentContact(
+  id: string,
+  newPhone: string,
+  residentName: string,
+  unitBlock: string,
+  oldPhone?: string
+): Promise<void> {
+  // 1. Persist directly to Cloud Firestore & write transparent audit trail
+  try {
+    await updateResidentContactInFirestore(id, newPhone, residentName, unitBlock, oldPhone);
+  } catch (fsErr) {
+    console.warn('Firestore update contact error:', fsErr);
+  }
+
+  // 2. Sync to local backend server
+  try {
+    await fetch(`/api/residents/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ noWhatsapp: newPhone })
+    });
+  } catch (apiErr) {
+    console.warn('Server sync contact warning:', apiErr);
+  }
+}
+
+// Update resident PIN with dual-write to Firestore & server
+export async function updateResidentPin(
+  id: string,
+  newPin: string,
+  residentName: string,
+  unitBlock: string,
+  actor: string = 'Admin Paguyuban',
+  role: Role = 'BENDAHARA'
+): Promise<void> {
+  // 1. Persist directly to Cloud Firestore & write transparent audit log
+  try {
+    await updateResidentPinInFirestore(id, newPin, residentName, unitBlock, actor, role);
+  } catch (fsErr) {
+    console.warn('Firestore update PIN error:', fsErr);
+  }
+
+  // 2. Sync to local backend server
+  try {
+    await fetch(`/api/residents/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin: newPin })
+    });
+  } catch (apiErr) {
+    console.warn('Server sync PIN warning:', apiErr);
+  }
+}
+
 
 // Add new resident with dual-write to Firestore & server
 export async function addResident(data: Partial<Resident>): Promise<Resident> {

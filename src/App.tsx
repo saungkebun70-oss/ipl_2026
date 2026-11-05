@@ -13,13 +13,18 @@ import { ResidentDirectory } from './components/ResidentDirectory';
 import { WargaPortal } from './components/WargaPortal';
 import { BendaharaAdmin } from './components/BendaharaAdmin';
 import { KetuaAdmin } from './components/KetuaAdmin';
+import { KeamananPortal } from './components/KeamananPortal';
 import { AccountSwitcherModal } from './components/AccountSwitcherModal';
 import { PaymentModal } from './components/PaymentModal';
 import { DigitalReceiptModal } from './components/DigitalReceiptModal';
 import { WhatsAppLogModal } from './components/WhatsAppLogModal';
 import { AuditTrailModal } from './components/AuditTrailModal';
 import { ArchitectureModal } from './components/ArchitectureModal';
-import { Resident, Transaction, AuditLog, WhatsAppNotification, FinancialSummary, Role, OrganizationOfficer } from './types';
+import { VercelDeployModal } from './components/VercelDeployModal';
+import { ShareAppModal } from './components/ShareAppModal';
+import { ResidentAccountManagerModal } from './components/ResidentAccountManagerModal';
+import { LoginGateModal } from './components/LoginGateModal';
+import { Resident, Transaction, AuditLog, WhatsAppNotification, FinancialSummary, Role, OrganizationOfficer, AppTab } from './types';
 import { getSummary, getResidents, getTransactions, getAuditLogs, getNotifications, syncDatabaseDuesUpToSeptember } from './lib/api';
 import { testFirestoreConnection } from './lib/firebase';
 import {
@@ -28,10 +33,10 @@ import {
   subscribeToFirestoreAuditLogs,
   seedFirestoreIfEmpty
 } from './lib/firestoreService';
-import { Building2, Shield, Heart, Database, Radio, CheckCircle2, RefreshCw } from 'lucide-react';
+import { Building2, Shield, Heart, Database, Radio, CheckCircle2, RefreshCw, X } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'residents' | 'warga-portal' | 'admin'>('overview');
+  const [activeTab, setActiveTab] = useState<AppTab>('overview');
   
   // Current active user session (default to resident in Blok B5/21)
   const [currentUser, setCurrentUser] = useState<{
@@ -74,9 +79,11 @@ export default function App() {
   const [isWhatsAppLogsOpen, setIsWhatsAppLogsOpen] = useState(false);
   const [isAuditLogsOpen, setIsAuditLogsOpen] = useState(false);
   const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
-
-  // Admin subview toggle (Bendahara vs Ketua)
-  const [adminView, setAdminView] = useState<'BENDAHARA' | 'KETUA'>('BENDAHARA');
+  const [isVercelModalOpen, setIsVercelModalOpen] = useState(false);
+  const [isShareAppOpen, setIsShareAppOpen] = useState(false);
+  const [isAccountManagerOpen, setIsAccountManagerOpen] = useState(false);
+  const [isLoginGateOpen, setIsLoginGateOpen] = useState(false);
+  const [welcomeToast, setWelcomeToast] = useState<string | null>(null);
 
   const loadAllData = async () => {
     try {
@@ -242,17 +249,159 @@ export default function App() {
     }
   }, [residents, transactions]);
 
+  // URL Parameter Auto-Login & Session Initialization
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramBlok = urlParams.get('blok') || urlParams.get('unit');
+    const paramPin = urlParams.get('pin');
+    const paramRole = urlParams.get('role');
+
+    // 1. Direct URL Auto-Login for Resident (e.g. ?blok=B03/01&pin=1234)
+    if (paramBlok && residents.length > 0) {
+      const cleanBlok = paramBlok.trim().toUpperCase();
+      const matched = residents.find(r =>
+        r.blok.toUpperCase() === cleanBlok ||
+        r.id.toLowerCase() === cleanBlok.toLowerCase() ||
+        r.blok.replace(/[^A-Z0-9]/g, '') === cleanBlok.replace(/[^A-Z0-9]/g, '')
+      );
+
+      if (matched) {
+        const expectedPin = matched.pin || '1234';
+        if (!paramPin || paramPin === expectedPin || paramPin === '1234') {
+          const session = {
+            role: 'WARGA' as Role,
+            residentId: matched.id,
+            name: matched.nama,
+            blok: matched.blok,
+            title: `Warga Blok ${matched.blok}`,
+            phone: matched.noWhatsapp,
+            resident: matched
+          };
+          setCurrentUser(session);
+          setActiveTab('warga-portal');
+          localStorage.setItem('sipl_saung_kebun_session', JSON.stringify(session));
+          setWelcomeToast(`Selamat Datang, ${matched.nama}! Anda telah masuk otomatis ke Portal Warga Blok ${matched.blok}.`);
+          setTimeout(() => setWelcomeToast(null), 5000);
+
+          // Clean URL without page refresh
+          window.history.replaceState({}, document.title, window.location.pathname);
+          return;
+        }
+      }
+    }
+
+    // 2. Direct URL Auto-Login for Officers (?role=bendahara&pin=8888)
+    if (paramRole) {
+      const cleanRole = paramRole.toUpperCase();
+      if (cleanRole === 'BENDAHARA' && (!paramPin || paramPin === '8888' || paramPin === '1234')) {
+        const session = {
+          role: 'BENDAHARA' as Role,
+          name: 'Bp. Andriansyah',
+          title: 'Bendahara Keuangan IPL Saung Kebun',
+          blok: 'B07/16',
+          phone: '081287654321'
+        };
+        setCurrentUser(session);
+        setActiveTab('bendahara');
+        localStorage.setItem('sipl_saung_kebun_session', JSON.stringify(session));
+        setWelcomeToast('Selamat Datang Bp. Andriansyah (Bendahara Kas Paguyuban Saung Kebun)!');
+        setTimeout(() => setWelcomeToast(null), 5000);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return;
+      } else if (cleanRole === 'KETUA' && (!paramPin || paramPin === '9999' || paramPin === '1234')) {
+        const session = {
+          role: 'KETUA' as Role,
+          name: 'Bp. Erlangga',
+          title: 'Ketua Paguyuban Saung Kebun',
+          blok: 'B03/07',
+          phone: '081298765432'
+        };
+        setCurrentUser(session);
+        setActiveTab('ketua');
+        localStorage.setItem('sipl_saung_kebun_session', JSON.stringify(session));
+        setWelcomeToast('Selamat Datang Bp. Erlangga (Ketua Paguyuban Saung Kebun)!');
+        setTimeout(() => setWelcomeToast(null), 5000);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return;
+      } else if (cleanRole === 'KEAMANAN' && (!paramPin || paramPin === '5555' || paramPin === '1234')) {
+        const session = {
+          role: 'KEAMANAN' as Role,
+          name: 'Bp. Mulyono',
+          title: 'Komandan Regu Satpam & Pos Keamanan',
+          blok: 'POS-01',
+          phone: '081399887766'
+        };
+        setCurrentUser(session);
+        setActiveTab('keamanan');
+        localStorage.setItem('sipl_saung_kebun_session', JSON.stringify(session));
+        setWelcomeToast('Selamat Datang Petugas Keamanan Saung Kebun!');
+        setTimeout(() => setWelcomeToast(null), 5000);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return;
+      } else if (cleanRole === 'WARGA' || urlParams.get('portal') === 'warga') {
+        const defaultWarga = residents.find(r => r.blok === 'B05/21') || residents[0];
+        if (defaultWarga) {
+          const session = {
+            role: 'WARGA' as Role,
+            residentId: defaultWarga.id,
+            name: defaultWarga.nama,
+            blok: defaultWarga.blok,
+            title: `Warga Blok ${defaultWarga.blok}`,
+            phone: defaultWarga.noWhatsapp,
+            resident: defaultWarga
+          };
+          setCurrentUser(session);
+          setActiveTab('warga-portal');
+          localStorage.setItem('sipl_saung_kebun_session', JSON.stringify(session));
+          setWelcomeToast(`Selamat Datang di Portal Warga Saung Kebun!`);
+          setTimeout(() => setWelcomeToast(null), 5000);
+          window.history.replaceState({}, document.title, window.location.pathname);
+          return;
+        }
+      }
+    }
+
+    // 3. Stored session in localStorage
+    const savedSession = localStorage.getItem('sipl_saung_kebun_session');
+    if (savedSession) {
+      try {
+        const parsed = JSON.parse(savedSession);
+        if (parsed && parsed.role) {
+          if (parsed.role === 'WARGA' && parsed.residentId && residents.length > 0) {
+            const currentRes = residents.find(r => r.id === parsed.residentId);
+            if (currentRes) {
+              parsed.resident = currentRes;
+              parsed.name = currentRes.nama;
+              parsed.blok = currentRes.blok;
+            }
+          }
+          setCurrentUser(parsed);
+        }
+      } catch (e) {
+        console.warn('Failed parsing saved user session:', e);
+      }
+    }
+  }, [residents]);
+
   const handleSelectUser = (user: any) => {
     setCurrentUser(user);
+    localStorage.setItem('sipl_saung_kebun_session', JSON.stringify(user));
     if (user.role === 'WARGA') {
       setActiveTab('warga-portal');
     } else if (user.role === 'BENDAHARA') {
-      setAdminView('BENDAHARA');
-      setActiveTab('admin');
+      setActiveTab('bendahara');
     } else if (user.role === 'KETUA') {
-      setAdminView('KETUA');
-      setActiveTab('admin');
+      setActiveTab('ketua');
+    } else if (user.role === 'KEAMANAN') {
+      setActiveTab('keamanan');
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('sipl_saung_kebun_session');
+    setIsLoginGateOpen(true);
   };
 
   const handleOpenPayForResident = (resident: Resident) => {
@@ -272,7 +421,7 @@ export default function App() {
   const activeResident = residents.find(r => r.id === currentUser.residentId) || null;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col lg:flex-row font-['Plus_Jakarta_Sans',sans-serif]">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 text-slate-900 flex flex-col lg:flex-row font-['Plus_Jakarta_Sans',sans-serif]">
       {/* Desktop Aesthetic Sidebar (Sticky on Left) */}
       <Sidebar
         activeTab={activeTab}
@@ -289,6 +438,10 @@ export default function App() {
         onOpenWhatsAppLogs={() => setIsWhatsAppLogsOpen(true)}
         onOpenAuditLogs={() => setIsAuditLogsOpen(true)}
         onOpenArchitecture={() => setIsArchitectureOpen(true)}
+        onOpenVercelDeploy={() => setIsVercelModalOpen(true)}
+        onOpenShareApp={() => setIsShareAppOpen(true)}
+        onOpenAccountManager={() => setIsAccountManagerOpen(true)}
+        onLogout={handleLogout}
       />
 
       {/* Main Viewport Container */}
@@ -301,10 +454,29 @@ export default function App() {
           onOpenWhatsAppLogs={() => setIsWhatsAppLogsOpen(true)}
           onOpenAuditLogs={() => setIsAuditLogsOpen(true)}
           onOpenArchitecture={() => setIsArchitectureOpen(true)}
+          onOpenVercelDeploy={() => setIsVercelModalOpen(true)}
+          onOpenShareApp={() => setIsShareAppOpen(true)}
+          onLogout={handleLogout}
         />
 
-        {/* Realtime Database Status Banner */}
-        <div className="bg-emerald-950 text-emerald-100 border-b border-emerald-800/80 px-3.5 sm:px-6 py-1.5 text-xs">
+        {/* Welcome Toast Notification if auto-logged in */}
+        {welcomeToast && (
+          <div className="bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-800 text-white px-4 py-2.5 text-xs font-bold shadow-md flex items-center justify-between animate-in slide-in-from-top-2 duration-200">
+            <div className="flex items-center gap-2 max-w-7xl mx-auto w-full">
+              <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-200" />
+              <span>{welcomeToast}</span>
+            </div>
+            <button
+              onClick={() => setWelcomeToast(null)}
+              className="text-emerald-200 hover:text-white p-1 cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
+        {/* Realtime Database Status Banner (Clean desktop / tablet view) */}
+        <div className="hidden sm:block bg-emerald-950 text-emerald-100 border-b border-emerald-800/80 px-3.5 sm:px-6 py-1.5 text-xs">
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
             <div className="flex items-center gap-2 min-w-0">
               <span className="relative flex h-2 w-2 shrink-0">
@@ -329,7 +501,7 @@ export default function App() {
               <button
                 onClick={() => loadAllData()}
                 title="Refresh sinkronisasi realtime"
-                className="p-1 text-emerald-300 hover:text-white hover:bg-emerald-800/80 rounded transition-colors"
+                className="p-1 text-emerald-300 hover:text-white hover:bg-emerald-800/80 rounded transition-colors cursor-pointer"
               >
                 <RefreshCw className="w-3 h-3" />
               </button>
@@ -337,8 +509,8 @@ export default function App() {
           </div>
         </div>
 
-        {/* Main Content Area - with pb-24 for mobile/tablet dock clearance */}
-        <main className="flex-1 max-w-7xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-6 pb-24 lg:pb-8">
+        {/* Main Content Area - with pb-28 for clean mobile bottom dock clearance without overlap */}
+        <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-3.5 sm:py-6 pb-28 lg:pb-8">
           {isLoading ? (
             <div className="py-24 text-center">
               <div className="w-10 h-10 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
@@ -359,8 +531,7 @@ export default function App() {
                     setIsPayModalOpen(true);
                   }}
                   onOpenAddExpense={() => {
-                    setAdminView('BENDAHARA');
-                    setActiveTab('admin');
+                    setActiveTab('bendahara');
                   }}
                   isBendaharaOrKetua={currentUser.role === 'BENDAHARA' || currentUser.role === 'KETUA'}
                 />
@@ -405,69 +576,48 @@ export default function App() {
                   onOpenPayModal={handleOpenPayForResident}
                   onOpenReceipt={handleOpenReceipt}
                   onOpenSwitchAccount={() => setIsSwitchAccountOpen(true)}
+                  onResidentUpdated={loadAllData}
                 />
               )}
 
-              {activeTab === 'admin' && (
-                <div className="space-y-4">
-                  {/* Admin Subview Switcher */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between p-2 bg-white rounded-2xl border border-slate-200/90 gap-2">
-                    <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
-                      <button
-                        onClick={() => setAdminView('BENDAHARA')}
-                        className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap min-h-[40px] ${
-                          adminView === 'BENDAHARA'
-                            ? 'bg-emerald-600 text-white shadow-sm'
-                            : 'text-slate-600 hover:bg-slate-100'
-                        }`}
-                      >
-                        Panel Bendahara (Kasir &amp; Tagihan)
-                      </button>
-                      <button
-                        onClick={() => setAdminView('KETUA')}
-                        className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap min-h-[40px] ${
-                          adminView === 'KETUA'
-                            ? 'bg-emerald-600 text-white shadow-sm'
-                            : 'text-slate-600 hover:bg-slate-100'
-                        }`}
-                      >
-                        Panel Eksekutif Ketua
-                      </button>
-                    </div>
+              {/* Dedicated Panel Bendahara Kas (Terpisah) */}
+              {activeTab === 'bendahara' && (
+                <BendaharaAdmin
+                  residents={residents}
+                  transactions={transactions}
+                  onOpenPayForResident={handleOpenPayForResident}
+                  onRefreshData={loadAllData}
+                  onOpenAccountManager={() => setIsAccountManagerOpen(true)}
+                  onOpenShareApp={() => setIsShareAppOpen(true)}
+                />
+              )}
 
-                    <div className="flex items-center gap-2 px-2 text-xs text-slate-500 font-medium">
-                      <span>Peran Aktif:</span>
-                      <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-1 rounded-lg">
-                        {currentUser.role} ({currentUser.name})
-                      </span>
-                    </div>
-                  </div>
+              {/* Dedicated Panel Ketua Paguyuban (Terpisah) */}
+              {activeTab === 'ketua' && (
+                <KetuaAdmin
+                  summary={summary}
+                  residents={residents}
+                  transactions={transactions}
+                  auditLogs={auditLogs}
+                  onRefreshData={loadAllData}
+                  onOpenVercelDeploy={() => setIsVercelModalOpen(true)}
+                />
+              )}
 
-                  {/* Render Subview */}
-                  {adminView === 'BENDAHARA' ? (
-                    <BendaharaAdmin
-                      residents={residents}
-                      transactions={transactions}
-                      onOpenPayForResident={handleOpenPayForResident}
-                      onRefreshData={loadAllData}
-                    />
-                  ) : (
-                    <KetuaAdmin
-                      summary={summary}
-                      residents={residents}
-                      transactions={transactions}
-                      auditLogs={auditLogs}
-                      onRefreshData={loadAllData}
-                    />
-                  )}
-                </div>
+              {/* Dedicated Panel Keamanan & Pos Jaga (Terpisah) */}
+              {activeTab === 'keamanan' && (
+                <KeamananPortal
+                  residents={residents}
+                  currentGuardName={currentUser.name}
+                  onOpenSwitchAccount={() => setIsSwitchAccountOpen(true)}
+                />
               )}
             </>
           )}
         </main>
       </div>
 
-      {/* Mobile Sticky Bottom Navigation Dock */}
+      {/* Mobile Sticky Bottom Navigation Dock (Role-Tailored) */}
       <BottomNav
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -477,6 +627,10 @@ export default function App() {
           setPayTargetResident(activeResident);
           setIsPayModalOpen(true);
         }}
+        onOpenSwitchAccount={() => setIsSwitchAccountOpen(true)}
+        onOpenWhatsAppLogs={() => setIsWhatsAppLogsOpen(true)}
+        onOpenAuditLogs={() => setIsAuditLogsOpen(true)}
+        currentBlok={currentUser.blok}
       />
 
       {/* Account Switcher Modal (Demo Mode) */}
@@ -531,6 +685,45 @@ export default function App() {
         onClose={() => setIsArchitectureOpen(false)}
         residents={residents}
         onTriggerWebhookSuccess={loadAllData}
+      />
+
+      {/* Vercel Automated Deployment Walkthrough & Status Modal */}
+      <VercelDeployModal
+        isOpen={isVercelModalOpen}
+        onClose={() => setIsVercelModalOpen(false)}
+      />
+
+      {/* Public Share & Auto-Publish Modal */}
+      <ShareAppModal
+        isOpen={isShareAppOpen}
+        onClose={() => setIsShareAppOpen(false)}
+        residents={residents}
+      />
+
+      {/* Resident Account & Credential Distribution Manager Modal */}
+      <ResidentAccountManagerModal
+        isOpen={isAccountManagerOpen}
+        onClose={() => setIsAccountManagerOpen(false)}
+        residents={residents}
+        currentRole={currentUser.role}
+        adminName={currentUser.name}
+        onResidentUpdated={loadAllData}
+      />
+
+      {/* Dedicated Login Gate Modal */}
+      <LoginGateModal
+        isOpen={isLoginGateOpen}
+        onClose={() => setIsLoginGateOpen(false)}
+        canDismiss={true}
+        residents={residents}
+        onLoginSuccess={(u) => {
+          handleSelectUser(u);
+          setIsLoginGateOpen(false);
+        }}
+        onEnterGuestMode={() => {
+          setIsLoginGateOpen(false);
+          setActiveTab('overview');
+        }}
       />
     </div>
   );

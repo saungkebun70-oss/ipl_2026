@@ -12,7 +12,7 @@ import {
   writeBatch
 } from 'firebase/firestore';
 import { db } from './firebase';
-import { Resident, Transaction, AuditLog, MonthKey, MonthPaymentStatus, MonthlyLedgerItem } from '../types/index';
+import { Resident, Transaction, AuditLog, MonthKey, MonthPaymentStatus, MonthlyLedgerItem, Role } from '../types/index';
 import { buildResidentsFromRoster, IPL_TARIFF, MONTH_KEYS, MONTH_LABELS } from '../data/saungKebunRosterData';
 
 export enum OperationType {
@@ -59,6 +59,25 @@ export function handleFirestoreError(error: unknown, operationType: OperationTyp
   throw new Error(JSON.stringify(errInfo));
 }
 
+/**
+ * Recursively strips undefined fields from objects/arrays so Firestore doesn't reject them.
+ */
+export function cleanFirestoreData<T>(data: T): T {
+  if (data === undefined) return null as unknown as T;
+  if (data === null || typeof data !== 'object') return data;
+  if (data instanceof Date) return data;
+  if (Array.isArray(data)) {
+    return data.map((item) => cleanFirestoreData(item)) as unknown as T;
+  }
+  const result: Record<string, any> = {};
+  for (const [key, val] of Object.entries(data as Record<string, any>)) {
+    if (val !== undefined) {
+      result[key] = cleanFirestoreData(val);
+    }
+  }
+  return result as T;
+}
+
 // Helper to sort residents logically by block then unit number
 export function sortResidentsByUnit(list: Resident[]): Resident[] {
   const blockOrder: Record<string, number> = {
@@ -101,7 +120,7 @@ export async function seedFirestoreIfEmpty(): Promise<boolean> {
     const batch = writeBatch(db);
     initialResidents.forEach((res) => {
       const ref = doc(db, 'residents', res.id);
-      batch.set(ref, res, { merge: true });
+      batch.set(ref, cleanFirestoreData(res), { merge: true });
     });
 
     // Seed / update settings with version tag
@@ -229,7 +248,7 @@ export async function addResidentToFirestore(resident: Resident): Promise<void> 
   const path = `residents/${resident.id}`;
   try {
     const ref = doc(db, 'residents', resident.id);
-    await setDoc(ref, resident);
+    await setDoc(ref, cleanFirestoreData(resident));
 
     const logId = `log-${Date.now()}`;
     await setDoc(doc(db, 'auditLogs', logId), {
@@ -271,7 +290,7 @@ export async function updateResidentInFirestore(residentId: string, updates: Par
   const path = `residents/${residentId}`;
   try {
     const ref = doc(db, 'residents', residentId);
-    await setDoc(ref, updates, { merge: true });
+    await setDoc(ref, cleanFirestoreData(updates), { merge: true });
 
     // Also record audit log
     const logId = `log-${Date.now()}`;
@@ -287,6 +306,63 @@ export async function updateResidentInFirestore(residentId: string, updates: Par
     handleFirestoreError(err, OperationType.UPDATE, path);
   }
 }
+
+// Update resident contact (phone/WhatsApp) by resident with transparent audit log
+export async function updateResidentContactInFirestore(
+  residentId: string,
+  newPhone: string,
+  residentName: string,
+  unitBlock: string,
+  oldPhone?: string
+): Promise<void> {
+  const path = `residents/${residentId}`;
+  try {
+    const ref = doc(db, 'residents', residentId);
+    await setDoc(ref, cleanFirestoreData({ noWhatsapp: newPhone }), { merge: true });
+
+    // Record audit log entry for transparency
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor: `${residentName} (Warga Kavling ${unitBlock})`,
+      role: 'WARGA',
+      action: 'UPDATE_KONTAK_WARGA',
+      detail: `Warga unit ${unitBlock} (${residentName}) memperbarui kontak nomor WhatsApp dari "${oldPhone || '-'}" menjadi "${newPhone}".`
+    });
+  } catch (err) {
+    handleFirestoreError(err, OperationType.UPDATE, path);
+  }
+}
+
+// Update resident PIN with dual-write to Firestore and transparent audit log
+export async function updateResidentPinInFirestore(
+  residentId: string,
+  newPin: string,
+  residentName: string,
+  unitBlock: string,
+  actor: string = 'Admin Paguyuban',
+  role: Role = 'BENDAHARA'
+): Promise<void> {
+  const path = `residents/${residentId}`;
+  try {
+    const ref = doc(db, 'residents', residentId);
+    await setDoc(ref, cleanFirestoreData({ pin: newPin }), { merge: true });
+
+    const logId = `log-${Date.now()}`;
+    await setDoc(doc(db, 'auditLogs', logId), {
+      id: logId,
+      timestamp: new Date().toISOString(),
+      actor,
+      role,
+      action: 'UPDATE_PIN_WARGA',
+      detail: `${actor} (${role}) memperbarui PIN akses warga unit ${unitBlock} (${residentName}) menjadi PIN baru.`
+    });
+  } catch (err) {
+    handleFirestoreError(err, OperationType.UPDATE, path);
+  }
+}
+
 
 // Update a specific month payment status for a resident
 export async function updateResidentMonthStatusInFirestore(
@@ -332,14 +408,19 @@ export async function updateResidentMonthStatusInFirestore(
     }
 
     const ref = doc(db, 'residents', resident.id);
-    await updateDoc(ref, {
+    const updatePayload: any = {
       monthlyLedger: updatedLedger,
       totalSetoran,
       totalTunggakan,
       bulanMenunggak: bulanMenunggakList,
-      statusBulanIni,
-      lastPaymentDate: status === 'LUNAS' ? new Date().toISOString().split('T')[0] : resident.lastPaymentDate
-    });
+      statusBulanIni
+    };
+    if (status === 'LUNAS') {
+      updatePayload.lastPaymentDate = new Date().toISOString().split('T')[0];
+    } else if (resident.lastPaymentDate) {
+      updatePayload.lastPaymentDate = resident.lastPaymentDate;
+    }
+    await updateDoc(ref, cleanFirestoreData(updatePayload));
 
     // Record audit log
     const logId = `log-${Date.now()}`;
@@ -496,20 +577,19 @@ export async function syncFirestoreRosterDuesUpToSeptember(): Promise<{ success:
     updatedResidents.forEach((res) => {
       const ref = doc(db, 'residents', res.id);
       // Merge updates the ledger and financial metrics while preserving other custom fields
-      batch.set(
-        ref,
-        {
-          nama: res.nama,
-          statusHunian: res.statusHunian,
-          monthlyLedger: res.monthlyLedger,
-          totalSetoran: res.totalSetoran,
-          totalTunggakan: res.totalTunggakan,
-          bulanMenunggak: res.bulanMenunggak,
-          statusBulanIni: res.statusBulanIni,
-          lastPaymentDate: res.lastPaymentDate
-        },
-        { merge: true }
-      );
+      const docData: any = {
+        nama: res.nama,
+        statusHunian: res.statusHunian,
+        monthlyLedger: res.monthlyLedger,
+        totalSetoran: res.totalSetoran,
+        totalTunggakan: res.totalTunggakan,
+        bulanMenunggak: res.bulanMenunggak,
+        statusBulanIni: res.statusBulanIni
+      };
+      if (res.lastPaymentDate) {
+        docData.lastPaymentDate = res.lastPaymentDate;
+      }
+      batch.set(ref, cleanFirestoreData(docData), { merge: true });
 
       if (['B6', 'B7'].includes(res.blokGroup) && res.totalSetoran) {
         totalB6B7 += res.totalSetoran;

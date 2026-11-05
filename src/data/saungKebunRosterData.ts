@@ -463,7 +463,7 @@ export function buildResidentsFromRoster(): Resident[] {
 
     const isOccupied = hasName && (totalSetoran > 0 || bulanMenunggakList.length > 0 || ['B05/21', 'B05/24'].includes(blokFormatted));
 
-    return {
+    const residentData: Resident = {
       id: `res-${row.blok.toLowerCase()}-${numPadded}`,
       blok: blokFormatted,
       blokGroup: row.blok,
@@ -476,10 +476,15 @@ export function buildResidentsFromRoster(): Resident[] {
       statusBulanIni,
       bulanMenunggak: bulanMenunggakList,
       totalTunggakan,
-      lastPaymentDate: totalSetoran > 0 ? '2026-09-05' : undefined,
       pin: '1234',
       monthlyLedger,
       totalSetoran
     };
+
+    if (totalSetoran > 0) {
+      residentData.lastPaymentDate = '2026-09-05';
+    }
+
+    return residentData;
   });
 }
